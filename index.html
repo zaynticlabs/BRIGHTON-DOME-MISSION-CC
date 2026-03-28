@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dome Mission | Cricket Club in Brighton, Sussex</title>
+    <meta name="description" content="Dome Mission — a friendly, sociable and inclusive cricket club in Patcham, Brighton, established 1937. Playing in Sussex League Division 4 and Division 10 Central in 2026. New members welcome.">
+    <meta name="keywords" content="Brighton cricket club, Dome Mission, BDM CC, Brighton Dome Mission, Patcham cricket, Sussex Cricket League, cricket Brighton, join cricket club Brighton, Division 4 cricket">
+    <meta property="og:title" content="Dome Mission | Up the Dome!">
+    <meta property="og:description" content="Friendly, sociable, inclusive cricket club in Brighton since 1937. All standards welcome. Up the Dome! 🏏">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="images/dome/dome-mission-logo.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+      DOME MISSION — WEBSITE FOLDER STRUCTURE
+      =====================================================
+      index.html        → Main website
+      style.css         → All styles
+      script.js         → All JavaScript
+      
+      /images/
+        /agm-2026/      → Drop AGM 2026 photos here
+                          Name: agm-2026-01.jpg, agm-2026-02.jpg...
+        /awards-2025/   → Drop awards ceremony photos here
+                          Name: awards-01.jpg, awards-02.jpg...
+        /team1-matches/ → 1st XI match photos
+                          Subfolder per match: /2026-04-18/
+                          Names: match-01.jpg, match-02.jpg...
+        /team2-matches/ → 2nd XI match photos (same structure)
+        /squad/         → Player headshots (optional)
+                          Name: firstname-lastname.jpg
+                          
+    -->
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" role="navigation">
+        <div class="nav-container">
+            <a href="#" class="brand">
+                <img src="images/dome/dome-mission-logo.png" class="brand-logo" alt="Dome Mission Logo">
+                <div class="brand-text">
+                    <span class="brand-title">Dome Mission</span>
+                    <span class="brand-subtitle">Brighton Dome Mission CC</span>
+                </div>
+            </a>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#">HOME</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#matches">MATCHES ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#matches" data-tab="1st-schedule">1st XI Schedule 2026</a></li>
+                            <li><a href="#matches" data-tab="2nd-schedule">2nd XI Schedule 2026</a></li>
+                            <li><a href="#matches" data-tab="1st-results">Results — 1st XI</a></li>
+                            <li><a href="#matches" data-tab="2nd-results">Results — 2nd XI</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="#teams">TEAMS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#teams" data-tab="1st-squad">1st XI Squad</a></li>
+                            <li><a href="#teams" data-tab="2nd-squad">2nd XI Squad</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#news">NEWS</a></li>
+                    <li class="dropdown-parent">
+                        <a href="#media">MEDIA ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#media" class="media-link" data-folder="agm-2026">AGM Photos (2026)</a></li>
+                            <li><a href="#media" class="media-link" data-folder="awards">Awards Ceremony</a></li>
+                            <li><a href="#media" class="media-link" data-folder="1st-photos">1st XI Match Photos</a></li>
+                            <li><a href="#media" class="media-link" data-folder="2nd-photos">2nd XI Match Photos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="#information">INFORMATION ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#information" data-tab="officials">Officials</a></li>
+                            <li><a href="#information" data-tab="facilities">Playing Facilities</a></li>
+                            <li><a href="#information" data-tab="history">Club History</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="#contact">CONTACT ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="#contact" data-tab="contact-us">Get in Touch</a></li>
+                            <li><a href="#contact" data-tab="join">Join the Club</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn">
+                        <span class="moon-icon">🌙</span>
+                        <span class="sun-icon">☀️</span>
+                    </button>
+                    <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon" aria-label="Instagram">IG</a>
+                    <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon" aria-label="YouTube">YT</a>
+                    <a href="https://x.com/DomeMission" target="_blank" class="social-icon" aria-label="X (Twitter)">𝕏</a>
+                    <a href="#contact" class="btn btn-primary btn-join" onclick="document.querySelector('#contact [data-target=\'join\']').click();">JOIN US</a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top">
+                <button id="mobile-theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn">
+                    <span class="moon-icon">🌙</span>
+                    <span class="sun-icon">☀️</span>
+                </button>
+            </div>
+            <!-- Mobile links injected by JS -->
+            <ul class="mobile-links"></ul>
+            <div class="mobile-socials">
+                <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon">IG</a>
+                <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon">YT</a>
+                <a href="https://x.com/DomeMission" target="_blank" class="social-icon">𝕏</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- SECTION 1: HERO -->
+        <section id="hero" class="hero-section">
+            <div class="pitch-overlay"></div>
+            <div class="stadium-arc"></div>
+            <div class="hero-content">
+                <div class="hero-badge">ESTABLISHED 1937 • PATCHAM, BRIGHTON</div>
+                <h1 class="hero-title">
+                    <span class="line1">BRIGHTON DOME</span><br>
+                    <span class="line2">MISSION</span>
+                </h1>
+                
+                <div class="tagline-rotator">
+                    <p class="tagline active">Friendly. Sociable. Inclusive.</p>
+                    <p class="tagline">Welcoming players of all standards.</p>
+                    <p class="tagline">A great mix of characters and cultures.</p>
+                </div>
+                
+                <p class="hero-body">
+                    We are a friendly, sociable and inclusive cricket club bringing together a great mix of characters and cultures from England and India. New members are always welcome — no matter your standard. Up the Dome! 🏏
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#matches" class="btn btn-primary">🏏 View Fixtures</a>
+                    <a href="#contact" class="btn btn-outline" onclick="setTimeout(() => document.querySelector('#contact [data-target=\'join\']').click(), 100);">Join the Club</a>
+                </div>
+                
+                <div class="season-badges">
+                    <span class="badge badge-primary pulse">DIVISION 4 — 1ST XI 2026</span>
+                    <span class="badge badge-primary pulse" style="animation-delay: 1s;">DIVISION 10 CENTRAL — 2ND XI 2026</span>
+                </div>
+            </div>
+            
+            <div class="floating-ball-container">
+            </div>
+            
+            <div class="ticker-wrap">
+                <div class="ticker">
+                    <div class="ticker-content">
+                        🏆 Season 2019 — Winners Sussex League Division 6C  •  🥈 Season 2021 — Runners Up Sussex League (PROMOTED)  •  🏆 Season 2018 — Winners Sussex League Division 7C  •  🏆 Season 2017 — Winners West Sussex Invitation League Div 5  •  🏆 Season 2016 — Winners WSIL Division 6  •  🏏 1st XI Captain: Vikram Sharma  •  2nd XI Captain: Vidit Gupta  •  Up the Dome! 🏏
+                    </div>
+                    <div class="ticker-content">
+                        🏆 Season 2019 — Winners Sussex League Division 6C  •  🥈 Season 2021 — Runners Up Sussex League (PROMOTED)  •  🏆 Season 2018 — Winners Sussex League Division 7C  •  🏆 Season 2017 — Winners West Sussex Invitation League Div 5  •  🏆 Season 2016 — Winners WSIL Division 6  •  🏏 1st XI Captain: Vikram Sharma  •  2nd XI Captain: Vidit Gupta  •  Up the Dome! 🏏
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: QUICK STATS BAR -->
+        <section id="stats" class="stats-section scroll-anim">
+            <div class="container grid stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number orbitron counter" data-target="87">0</div>
+                    <div class="stat-label">Years Established</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number orbitron counter" data-target="2">0</div>
+                    <div class="stat-label">Teams</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number orbitron counter" data-target="6">0</div>
+                    <div class="stat-label">League Titles</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number orbitron counter" data-target="2026" data-start="2000">2000</div>
+                    <div class="stat-label">Current Season</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number orbitron">∞</div>
+                    <div class="stat-label">Great Memories</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SEASON OVERVIEW -->
+        <section id="season-overview" class="season-section diagonal-bottom pb-m">
+            <div class="container scroll-anim">
+                <div class="grid cards-grid">
+                    <div class="glass-card border-focus">
+                        <div class="card-content">
+                            <h3 class="card-title">🏏 1st XI — 2026 SEASON</h3>
+                            <ul class="info-list">
+                                <li><strong>Division:</strong> Sussex League Division 4 East</li>
+                                <li><strong>Captain:</strong> Vikram Sharma</li>
+                                <li><strong>T20 Captain:</strong> Joshith G</li>
+                                <li><strong>Home Ground:</strong> Horsdean, Vale Avenue, Patcham, Brighton</li>
+                            </ul>
+                            <a href="#matches" class="btn btn-primary" onclick="switchMainTab('matches', '1st-schedule')">View Schedule</a>
+                        </div>
+                    </div>
+                    
+                    <div class="glass-card border-focus">
+                        <div class="card-content">
+                            <h3 class="card-title">🏏 2nd XI — 2026 SEASON</h3>
+                            <ul class="info-list">
+                                <li><strong>Division:</strong> Division 10 Central</li>
+                                <li><strong>Captain:</strong> Vidit Gupta</li>
+                                <li><strong>T20 Captain:</strong> Srini</li>
+                                <li><strong>Home Ground:</strong> Braypool, A23, Braypool Ln, BN1 8HZ</li>
+                            </ul>
+                            <a href="#matches" class="btn btn-primary" onclick="switchMainTab('matches', '2nd-schedule')">View Schedule</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-strip mt-2">
+                    <div class="timeline-scroll">
+                        <div class="timeline-item"><span class="badge badge-gold">🏆 2016</span> WSIL Division 6</div>
+                        <div class="timeline-item"><span class="badge badge-gold">🏆 2017</span> WSIL Division 5</div>
+                        <div class="timeline-item"><span class="badge badge-gold">🏆 2018</span> Sussex Div 7C</div>
+                        <div class="timeline-item"><span class="badge badge-gold">🏆 2019</span> Sussex Div 6C</div>
+                        <div class="timeline-item"><span class="badge badge-gold">🥈 2021</span> Sussex League Promoted</div>
+                        <div class="timeline-item"><span class="badge badge-gold">🥈 2021</span> Sussex Slam</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: MATCHES -->
+        <section id="matches" class="matches-section pt-m pb-m">
+            <div class="section-divider divider-ball"></div>
+            <div class="container scroll-anim">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Matches Hub</h2>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tabs-header" role="tablist">
+                        <button class="tab-btn active" role="tab" data-target="1st-schedule">1st XI Schedule</button>
+                        <button class="tab-btn" role="tab" data-target="2nd-schedule">2nd XI Schedule</button>
+                        <button class="tab-btn" role="tab" data-target="1st-results">1st XI Results</button>
+                        <button class="tab-btn" role="tab" data-target="2nd-results">2nd XI Results</button>
+                        <div class="tab-indicator"></div>
+                    </div>
+
+                    <div class="tabs-content">
+                        <!-- TAB 1: 1ST XI SCHEDULE -->
+                        <div class="tab-panel active" id="1st-schedule" role="tabpanel">
+                            <div class="season-summary-bar">
+                                Season 2026 | Sussex League Division 4 East | Matches: 16 | Home Ground: Horsdean, Brighton
+                            </div>
+                            <div class="table-container wrapper-card">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Opposition</th>
+                                            <th>H/A</th>
+                                            <th>Venue</th>
+                                            <th>Comp</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="1st-fixtures-body">
+                                        <!-- Replace with actual 2026 fixtures -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: 2ND XI SCHEDULE -->
+                        <div class="tab-panel" id="2nd-schedule" role="tabpanel">
+                            <div class="season-summary-bar">
+                                Season 2026 | Division 10 Central | Matches: 14 | Home Ground: Braypool, Brighton
+                            </div>
+                            <div class="table-container wrapper-card">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Opposition</th>
+                                            <th>H/A</th>
+                                            <th>Venue</th>
+                                            <th>Comp</th>
+                                            <th>Time</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="2nd-fixtures-body">
+                                        <!-- Replace with actual 2026 fixtures -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- TAB 3: 1ST XI RESULTS -->
+                        <div class="tab-panel" id="1st-results" role="tabpanel">
+                            <div class="season-summary-bar table-stats-bar text-center">
+                                P: 0 | W: 0 | L: 0 | D: 0 | NR: 0 | Pts: 0
+                            </div>
+                            <div class="results-grid wrapper-card" id="1st-results-body">
+                                <!-- Replace with actual results as season progresses -->
+                            </div>
+                        </div>
+
+                        <!-- TAB 4: 2ND XI RESULTS -->
+                        <div class="tab-panel" id="2nd-results" role="tabpanel">
+                            <div class="season-summary-bar table-stats-bar text-center">
+                                P: 0 | W: 0 | L: 0 | D: 0 | NR: 0 | Pts: 0
+                            </div>
+                            <div class="results-grid wrapper-card" id="2nd-results-body">
+                                <!-- Replace with actual results as season progresses -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TEAMS -->
+        <section id="teams" class="teams-section diagonal-top pb-m">
+            <div class="container scroll-anim">
+                <div class="section-header text-center pt-m">
+                    <h2 class="section-title">Club Teams</h2>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tabs-header justify-center" role="tablist">
+                        <button class="tab-btn active" role="tab" data-target="1st-squad">1st XI Squad</button>
+                        <button class="tab-btn" role="tab" data-target="2nd-squad">2nd XI Squad</button>
+                        <div class="tab-indicator"></div>
+                    </div>
+
+                    <div class="tabs-content">
+                        <!-- 1st XI Squad -->
+                        <div class="tab-panel active" id="1st-squad" role="tabpanel">
+                            <div class="squad-grid" id="1st-squad-grid">
+                                <!-- Add full squad details here -->
+                            </div>
+                            <h3 class="text-center mt-m">Coaching Staff</h3>
+                            <div class="squad-grid coaches-grid justify-center mt-1">
+                                <div class="player-card glass-card">
+                                    <div class="player-avatar"><div class="helmet-silhouette"></div></div>
+                                    <h4 class="player-name">Placeholder</h4>
+                                    <div class="player-badges"><span class="badge badge-primary">Head Coach</span></div>
+                                </div>
+                                <div class="player-card glass-card">
+                                    <div class="player-avatar"><div class="helmet-silhouette"></div></div>
+                                    <h4 class="player-name">Placeholder</h4>
+                                    <div class="player-badges"><span class="badge badge-primary">Assistant Coach</span></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2nd XI Squad -->
+                        <div class="tab-panel" id="2nd-squad" role="tabpanel">
+                            <div class="squad-grid" id="2nd-squad-grid">
+                                <!-- Add 2nd XI squad here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: NEWS -->
+        <section id="news" class="news-section pt-m pb-m">
+            <div class="section-divider divider-ball"></div>
+            <div class="container scroll-anim">
+                <div class="section-label text-center">— LATEST NEWS —</div>
+                <h2 class="section-title text-center">Club News & Updates</h2>
+                
+                <div class="filter-tabs mt-2 text-center" role="group" aria-label="News filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Match Report">Match Reports</button>
+                    <button class="filter-btn" data-filter="Club News">Club News</button>
+                    <button class="filter-btn" data-filter="Announcement">Announcements</button>
+                </div>
+                
+                <div class="masonry-grid mt-2" id="news-grid">
+                    <!-- News cards populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: MEDIA -->
+        <section id="media" class="media-section diagonal-bottom pb-m">
+            <div class="container scroll-anim">
+                <div class="section-label text-center pt-m">— PHOTO GALLERY —</div>
+                <h2 class="section-title text-center">Media & Gallery</h2>
+
+                <div class="folder-grid mt-2">
+                    <div class="folder-card glass-card" data-folder="agm-2026">
+                        <div class="folder-icon">📁</div>
+                        <h4 class="folder-name">AGM 2026 Photos</h4>
+                        <div class="folder-count badge badge-primary">2 Photos</div>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                    </div>
+                    
+                    <div class="folder-card glass-card" data-folder="awards">
+                        <div class="folder-icon">📁</div>
+                        <h4 class="folder-name">Awards Ceremony 2025</h4>
+                        <div class="folder-count badge badge-grey">0 Photos</div>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                    </div>
+                    
+                    <div class="folder-card glass-card" data-folder="1st-photos">
+                        <div class="folder-icon">📁</div>
+                        <h4 class="folder-name">1st XI Match Photos</h4>
+                        <div class="folder-count badge badge-grey">0 Photos</div>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                    </div>
+                    
+                    <div class="folder-card glass-card" data-folder="2nd-photos">
+                        <div class="folder-icon">📁</div>
+                        <h4 class="folder-name">2nd XI Match Photos</h4>
+                        <div class="folder-count badge badge-grey">0 Photos</div>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                    </div>
+                </div>
+
+                <!-- Gallery Panel -->
+                <div id="gallery-panel" class="gallery-panel glass-card mt-2">
+                    <div class="gallery-header flex-between mb-1">
+                        <h3 class="gallery-breadcrumb">Media > <span id="gallery-title">Gallery</span></h3>
+                        <button class="icon-btn close-gallery">✖</button>
+                    </div>
+                    
+                    <div class="photo-grid mt-1" id="photo-grid">
+                        <!-- Dynamic photos drop here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox Overlay -->
+        <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+            <button class="lightbox-close" aria-label="Close">✕</button>
+            <button class="lightbox-prev" aria-label="Previous image">❮</button>
+            <div class="lightbox-content">
+                <img id="lightbox-img" src="" alt="">
+                <div id="lightbox-caption" class="lightbox-caption"></div>
+            </div>
+            <button class="lightbox-next" aria-label="Next image">❯</button>
+        </div>
+
+        <!-- SECTION 8: INFORMATION -->
+        <section id="information" class="info-section pt-m pb-m">
+            <div class="section-divider divider-ball"></div>
+            <div class="container scroll-anim">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Club Information</h2>
+                </div>
+
+                <div class="tabs-container vertical-look">
+                    <div class="tabs-header side-tabs justify-center" role="tablist">
+                        <button class="tab-btn active" role="tab" data-target="officials">Officials</button>
+                        <button class="tab-btn" role="tab" data-target="facilities">Playing Facilities</button>
+                        <button class="tab-btn" role="tab" data-target="history">Club History</button>
+                        <div class="tab-indicator"></div>
+                    </div>
+
+                    <div class="tabs-content mt-2">
+                        <!-- Officials -->
+                        <div class="tab-panel active" id="officials" role="tabpanel">
+                            <h3 class="text-center mb-1">Club Officials</h3>
+                            <div class="squad-grid" id="officials-grid">
+                                <!-- Populated by JS -->
+                            </div>
+                        </div>
+
+                        <!-- Playing Facilities -->
+                        <div class="tab-panel" id="facilities" role="tabpanel">
+                            <div class="grid layout-2col">
+                                <div class="glass-card map-card border-focus">
+                                    <span class="badge badge-primary mb-1 d-ib">1ST XI HOME GROUND</span>
+                                    <h3 class="orbitron map-h3">HORSDEAN</h3>
+                                    <div class="address-block mt-1">
+                                        Vale Avenue<br>Patcham<br>Brighton<br>Sussex
+                                    </div>
+                                    <div class="map-embed">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.863116812836!2d-0.1554593!3d50.8654823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585099f783307%3A0xe675ca828e1c6b65!2sHorsdean%20Recreational%20Ground!5e0!3m2!1sen!2suk!4v1711666456789!5m2!1sen!2suk" loading="lazy"></iframe>
+                                    </div>
+                                    <div class="directions-box mt-1">
+                                        "Take the A23 turn off into Brighton from A27 bypass. Before reaching A23, take the left turn signposted Vale Avenue. Ground is half a mile along on the left."
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Horsdean+Cricket+Ground+Vale+Avenue+Patcham+Brighton" target="_blank" class="btn btn-outline mt-1 block w-100">📍 Get Directions</a>
+                                </div>
+                                
+                                <div class="glass-card map-card border-focus">
+                                    <span class="badge badge-primary mb-1 d-ib">2ND XI HOME GROUND</span>
+                                    <h3 class="orbitron map-h3">BRAYPOOL</h3>
+                                    <div class="address-block mt-1">
+                                        A23<br>Braypool Lane<br>Brighton<br>BN1 8HZ<br>Sussex
+                                    </div>
+                                    <div class="map-embed">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.863116812836!2d-0.160032!3d50.869811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585149372338b%3A0x6b772c7a72d1f9cc!2sBraypool%20Sports%20Ground!5e0!3m2!1sen!2suk!4v1711666456789!5m2!1sen!2suk" loading="lazy"></iframe>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Braypool+Cricket+Ground+Braypool+Lane+Brighton+BN1+8HZ" target="_blank" class="btn btn-outline mt-1 block w-100">📍 Get Directions</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Club History -->
+                        <div class="tab-panel" id="history" role="tabpanel">
+                            <div class="timeline-vertical">
+                                <div class="tl-item left">
+                                    <div class="tl-content glass-card">
+                                        <h3>1937 — Dome Mission Founded</h3>
+                                        <p>Established in 1937, Dome Mission began its journey as a club committed to bringing people together through cricket in the Brighton area.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item right">
+                                    <div class="tl-content glass-card">
+                                        <h3>1990s-2000s — Decades of Community Cricket</h3>
+                                        <p>Through the decades, Dome Mission built a reputation as one of Brighton's most welcoming and inclusive cricket clubs, attracting players from across England and India.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item left">
+                                    <div class="tl-content glass-card">
+                                        <h3 class="txt-gold">2016 — 🏆 WSIL Division 6 Champions</h3>
+                                        <p>Brighton Dome Mission win the West Sussex Invitation League Division 6 title — the club's first major honour in the modern era.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item right">
+                                    <div class="tl-content glass-card">
+                                        <h3 class="txt-gold">2017 — 🏆 WSIL Division 5 Champions — Back to Back!</h3>
+                                        <p>Successive league title wins cement Dome Mission's reputation as one of the most competitive clubs in West Sussex.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item left">
+                                    <div class="tl-content glass-card">
+                                        <h3 class="txt-gold">2018 — 🏆 Sussex League Division 7C Winners</h3>
+                                        <p>The club transitions to the Sussex Cricket League and immediately makes its mark — Division 7C Champions.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item right">
+                                    <div class="tl-content glass-card">
+                                        <h3 class="txt-gold">2019 — 🏆 Sussex League Division 6C Winners</h3>
+                                        <p>Another league title — three in four years. Dome Mission's golden era of cricket continues.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item left">
+                                    <div class="tl-content glass-card">
+                                        <h3 class="txt-green">2021 — 🥈 Runners Up — PROMOTED</h3>
+                                        <p>Despite finishing runners-up, Dome Mission earn promotion to a higher division. Also runners-up in the Sussex Slam T20 competition and semi-finalists in the Trophy.</p>
+                                    </div>
+                                </div>
+                                <div class="tl-item right">
+                                    <div class="tl-content glass-card border-focus">
+                                        <h3 class="txt-primary">2026 — 1st XI in Division 4 — Higher Than Ever</h3>
+                                        <p>Dome Mission's 1st XI compete in Division 4 East — the highest level in the club's history. Up the Dome! 🏏</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 9: CONTACT -->
+        <section id="contact" class="contact-section diagonal-top pb-m pt-m">
+            <div class="container scroll-anim">
+                <div class="tabs-container">
+                    <div class="tabs-header justify-center mb-2" role="tablist">
+                        <button class="tab-btn active" role="tab" data-target="contact-us">Get in Touch</button>
+                        <button class="tab-btn" role="tab" data-target="join">Join the Club</button>
+                        <button class="tab-btn" role="tab" data-target="find-us">Find Us</button>
+                        <div class="tab-indicator"></div>
+                    </div>
+
+                    <div class="tabs-content">
+                        <!-- GET IN TOUCH -->
+                        <div class="tab-panel active" id="contact-us" role="tabpanel">
+                            <div class="grid layout-2col">
+                                <!-- LEFT COL -->
+                                <div class="contact-info glass-card">
+                                    <h3 class="mb-1">Contact Dome Mission</h3>
+                                    
+                                    <div class="info-row">
+                                        <span class="icon">📧</span>
+                                        <div><span class="label">Email:</span> <a href="mailto:domemission7@gmail.com" class="link">domemission7@gmail.com</a></div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="icon">📞</span>
+                                        <div><span class="label">1st XI:</span> Joshith — <a href="tel:07786589595" class="link">07786589595</a></div>
+                                    </div>
+                                    <div class="info-row">
+                                        <span class="icon">📞</span>
+                                        <div><span class="label">Chairman:</span> Atish — <a href="tel:07871571260" class="link">07871571260</a></div>
+                                    </div>
+                                    <div class="info-row mb-1">
+                                        <span class="icon">📍</span>
+                                        <div><span class="label">Location:</span> Patcham, Brighton, East Sussex</div>
+                                    </div>
+                                    
+                                    <div class="wa-buttons mb-2">
+                                        <a href="https://wa.me/447786589595" target="_blank" class="btn btn-green block mb-sm">💬 WhatsApp Joshith</a>
+                                        <a href="https://wa.me/447871571260" target="_blank" class="btn btn-green block">💬 WhatsApp Atish</a>
+                                    </div>
+
+                                    <div class="social-row pt-1 border-top">
+                                        <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon circle">IG</a>
+                                        <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon circle">YT</a>
+                                        <a href="https://x.com/DomeMission" target="_blank" class="social-icon circle">𝕏</a>
+                                    </div>
+                                </div>
+                                
+                                <!-- RIGHT COL (Using Mailto action natively) -->
+                                <div class="contact-form-wrapper glass-card">
+                                    <form id="contact-form" class="styled-form" action="mailto:domemission7@gmail.com" method="POST" enctype="text/plain">
+                                        <div class="form-group">
+                                            <label for="c-name">Full Name *</label>
+                                            <input type="text" id="c-name" name="Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="c-email">Your Email Address</label>
+                                            <input type="email" id="c-email" name="Reply_To">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="c-phone">Phone Number</label>
+                                            <input type="tel" id="c-phone" name="Phone">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="c-subject">Subject</label>
+                                            <select id="c-subject" name="Subject">
+                                                <option>General Enquiry</option>
+                                                <option>Match / Fixture Query</option>
+                                                <option>Joining the Club</option>
+                                                <option>Sponsorship</option>
+                                                <option>Media / Press</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="c-msg">Message *</label>
+                                            <textarea id="c-msg" name="Message_Body" rows="4" required></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary block w-100">Send via Email Client</button>
+                                        <div class="form-success text-green mt-1 d-none" id="contact-success">
+                                            ✅ Mail client opened. Thanks!
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- JOIN THE CLUB -->
+                        <div class="tab-panel" id="join" role="tabpanel">
+                            <h3 class="text-center mb-1">Become Part of the Dome Mission Family</h3>
+                            
+                            <div class="join-pitch glass-card border-focus mb-2 text-center">
+                                <div class="pitch-icon mb-1">🏏</div>
+                                <p>Whether you're a seasoned cricketer or picking up a bat for the first time, Dome Mission welcomes players of all standards. We're a friendly, sociable and inclusive club with a great mix of characters from England and India.</p>
+                                <p class="mt-1"><strong>1st XI compete in Division 4 | 2nd XI in Division 10 Central</strong></p>
+                                <p class="mt-1">Contact Joshith: <a href="tel:07786589595">07786589595</a> | Atish: <a href="tel:07871571260">07871571260</a><br>Or fill in the joining form below.</p>
+                            </div>
+
+                            <div class="contact-form-wrapper glass-card form-wide">
+                                <form id="join-form" class="styled-form grid form-grid" action="mailto:domemission7@gmail.com" method="POST" enctype="text/plain">
+                                    <div class="form-group">
+                                        <label for="j-name">Full Name *</label>
+                                        <input type="text" id="j-name" name="Name" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="j-dob">Date of Birth *</label>
+                                        <input type="date" id="j-dob" name="DOB" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="j-email">Email Address *</label>
+                                        <input type="email" id="j-email" name="Email" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="j-phone">Phone Number *</label>
+                                        <input type="tel" id="j-phone" name="Phone" required>
+                                    </div>
+                                    <div class="form-group form-col-span2">
+                                        <label for="j-location">Location / Postcode</label>
+                                        <input type="text" id="j-location" name="Location">
+                                    </div>
+                                    <div class="form-group form-col-span2 border-top pt-1 mt-1">
+                                        <label for="j-exp">Playing Experience</label>
+                                        <select id="j-exp" name="Experience">
+                                            <option>Complete Beginner</option>
+                                            <option>Occasional Club Cricket</option>
+                                            <option>Regular Club Cricket</option>
+                                            <option>League Cricket Experience</option>
+                                            <option>Semi-Professional / Higher</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-col-span2">
+                                        <label>Preferred Role</label>
+                                        <div class="checkbox-group">
+                                            <label><input type="checkbox" name="role_Batsman" value="Yes"> Batsman</label>
+                                            <label><input type="checkbox" name="role_Bowler" value="Yes"> Bowler</label>
+                                            <label><input type="checkbox" name="role_AllRounder" value="Yes"> All-Rounder</label>
+                                            <label><input type="checkbox" name="role_Keeper" value="Yes"> Wicket-Keeper</label>
+                                            <label><input type="checkbox" name="role_NonPlaying" value="Yes"> Non-Playing / Supporter</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Batting Style</label>
+                                        <div class="radio-group" style="display: flex; gap: 1rem; margin-top:0.5rem;">
+                                            <label><input type="radio" name="Batting" value="Right-hand"> Right-hand</label>
+                                            <label><input type="radio" name="Batting" value="Left-hand"> Left-hand</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="j-bowl">Bowling Style</label>
+                                        <select id="j-bowl" name="Bowling">
+                                            <option>N/A (non-bowler)</option>
+                                            <option>Right-arm Fast</option>
+                                            <option>Right-arm Medium</option>
+                                            <option>Right-arm Off-spin</option>
+                                            <option>Left-arm Fast</option>
+                                            <option>Left-arm Medium</option>
+                                            <option>Left-arm Spin</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-col-span2">
+                                        <label for="j-hear">How did you hear about us?</label>
+                                        <select id="j-hear" name="Heard_From">
+                                            <option>Social Media</option>
+                                            <option>Google Search</option>
+                                            <option>Friend / Family</option>
+                                            <option>Sussex Cricket League</option>
+                                            <option>Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group form-col-span2">
+                                        <label for="j-msg">Additional message (optional)</label>
+                                        <textarea id="j-msg" name="Addl_Info" rows="2"></textarea>
+                                    </div>
+                                    <div class="form-group form-col-span2 mt-1">
+                                        <button type="submit" class="btn btn-primary block w-100">Send via Email Client</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- FIND US -->
+                        <div class="tab-panel" id="find-us" role="tabpanel">
+                            <div class="grid layout-2col">
+                                <div class="glass-card map-card border-focus">
+                                    <h3 class="orbitron map-h3">1st XI — Horsdean Ground</h3>
+                                    <div class="address-block mt-1">
+                                        Vale Avenue, Patcham, Brighton, Sussex
+                                    </div>
+                                    <div class="map-embed">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.863116812836!2d-0.1554593!3d50.8654823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585099f783307%3A0xe675ca828e1c6b65!2sHorsdean%20Recreational%20Ground!5e0!3m2!1sen!2suk!4v1711666456789!5m2!1sen!2suk" loading="lazy"></iframe>
+                                    </div>
+                                    <div class="directions-box mt-1">
+                                        <strong>Directions:</strong> Take the A23 turn off into Brighton from A27 bypass. Before reaching A23, take the left turn signposted Vale Avenue. Ground is half a mile along on the left.
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Horsdean+Cricket+Ground+Patcham+Brighton" target="_blank" class="btn btn-outline block mt-1 w-100">
+                                        📍 Open in Google Maps ↗
+                                    </a>
+                                </div>
+                                <div class="glass-card map-card border-focus">
+                                    <h3 class="orbitron map-h3">2nd XI — Braypool Ground</h3>
+                                    <div class="address-block mt-1">
+                                        A23, Braypool Lane, Brighton, BN1 8HZ, Sussex
+                                    </div>
+                                    <div class="map-embed">
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.863116812836!2d-0.160032!3d50.869811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487585149372338b%3A0x6b772c7a72d1f9cc!2sBraypool%20Sports%20Ground!5e0!3m2!1sen!2suk!4v1711666456789!5m2!1sen!2suk" loading="lazy"></iframe>
+                                    </div>
+                                    <a href="https://maps.google.com/?q=Braypool+Lane+Brighton+BN1+8HZ" target="_blank" class="btn btn-outline block mt-1 w-100">
+                                        📍 Open in Google Maps ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING ACTION BUTTON -->
+        <a href="#matches" id="fabBtn" class="fab-btn" aria-label="View Fixtures">
+            📅 View Fixtures
+        </a>
+        <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+            ↑
+        </button>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container pb-m">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col">
+                    <div class="brand mb-1">
+                        <img src="images/dome/dome-mission-logo.png" class="brand-logo sm" alt="Dome Mission Logo">
+                        <div class="brand-text">
+                            <span class="brand-title">DOME MISSION</span>
+                        </div>
+                    </div>
+                    <p class="mt-1">Established 1937 | Patcham, Brighton</p>
+                    <p>Friendly. Sociable. Inclusive. Up the Dome! 🏏</p>
+                    <div class="social-row pt-1">
+                        <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="https://x.com/DomeMission" target="_blank" class="social-icon" aria-label="X">𝕏</a>
+                    </div>
+                </div>
+                
+                <!-- Col 2 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#matches">Matches</a></li>
+                        <li><a href="#teams">Teams</a></li>
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#media">Media</a></li>
+                        <li><a href="#information">Information</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">2026 Season</h4>
+                    <ul class="footer-links nounderline">
+                        <li>1st XI — Division 4 East</li>
+                        <li>2nd XI — Division 10 Central</li>
+                        <li>1st XI Captain: Vikram Sharma</li>
+                        <li>2nd XI Captain: Vidit Gupta</li>
+                        <li>Home: Horsdean, Brighton</li>
+                        <li>Home: Braypool, Brighton</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">Contact</h4>
+                    <ul class="footer-links nounderline mb-1">
+                        <li>📧 <a href="mailto:domemission7@gmail.com">domemission7@gmail.com</a></li>
+                        <li>📞 Joshith: <a href="tel:07786589595">07786589595</a></li>
+                        <li>📞 Atish: <a href="tel:07871571260">07871571260</a></li>
+                    </ul>
+                    <a href="https://wa.me/447786589595" target="_blank" class="btn btn-green btn-sm inline-block">💬 WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom container">
+            <div>© 2026 Dome Mission CC. All Rights Reserved.</div>
+            <div class="text-center">🏏 Sussex Cricket League | Division 4 & 10</div>
+            <div class="text-right">Website by Hotspot Web Design</div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
