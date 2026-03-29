@@ -571,58 +571,58 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const team1 = [
-        { no: 1, name: 'Girija Shankar Barla', role: 'Batsman', meta: '-', img: 'images/squad/Girija Shankar Barla.png' },
-        { no: 2, name: 'Ashutosh Sharma', role: 'Batsman', meta: '-', img: 'images/squad/Ashutosh Sharma.png' },
-        { no: 3, name: 'Shahzad Afzal', role: 'All-Rounder', meta: '-', img: 'images/squad/Shahzad Afzal.png' },
-        { no: 4, name: 'Joe Gatford', role: 'Batsman', meta: '-', img: 'images/squad/Joe Gatford.png' },
-        { no: 5, name: 'Hemanth Maddela', role: 'All-Rounder', meta: '-', img: 'images/squad/Hemanth Maddela.png' },
-        { no: 6, name: 'Rohit Miglani', role: 'All-Rounder', meta: '-', img: 'images/squad/Rohit Miglani.png' },
-        { no: 7, name: 'Joshith G', role: 'Wicket-Keeper', t20: true, meta: 'Right-arm med', img: 'images/squad/Joshith G.png' },
-        { no: 8, name: 'Vikram Sharma', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/squad/Vikram Sharma.png' },
-        { no: 9, name: 'Anshul Singh Sikarwar', role: 'Bowler', meta: '-', img: 'images/squad/Anshul Singh Sikarwar.png' },
-        { no: 10, name: 'Ankit Choudhary', role: 'Bowler', meta: '-', img: 'images/squad/Ankit Choudhary.png' },
-        { no: 11, name: 'Atish More', role: 'Batsman', meta: 'RHB', img: 'images/squad/Atish More.png' },
+        { no: 1, name: 'Girija Shankar Barla', role: 'Batsman', meta: '-', img: 'images/Squad/Girija Shankar Barla.png' },
+        { no: 2, name: 'Ashutosh Sharma', role: 'Batsman', meta: '-', img: 'images/Squad/Ashutosh Sharma.png' },
+        { no: 3, name: 'Shahzad Afzal', role: 'All-Rounder', meta: '-', img: 'images/Squad/Shahzad Afzal.png' },
+        { no: 4, name: 'Joe Gatford', role: 'Batsman', meta: '-', img: 'images/Squad/Joe Gatford.png' },
+        { no: 5, name: 'Hemanth Maddela', role: 'All-Rounder', meta: '-', img: 'images/Squad/Hemanth Maddela.png' },
+        { no: 6, name: 'Rohit Miglani', role: 'All-Rounder', meta: '-', img: 'images/Squad/Rohit Miglani.png' },
+        { no: 7, name: 'Joshith G', role: 'Wicket-Keeper', t20: true, meta: 'Right-arm med', img: 'images/Squad/Joshith G.png' },
+        { no: 8, name: 'Vikram Sharma', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vikram Sharma.png' },
+        { no: 9, name: 'Anshul Singh Sikarwar', role: 'Bowler', meta: '-', img: 'images/Squad/Anshul Singh Sikarwar.png' },
+        { no: 10, name: 'Ankit Choudhary', role: 'Bowler', meta: '-', img: 'images/Squad/Ankit Choudhary.png' },
+        { no: 11, name: 'Atish More', role: 'Batsman', meta: 'RHB', img: 'images/Squad/Atish More.png' },
         { no: 12, name: 'Venkat Kota', role: 'Bowler', meta: '-' },
-        { no: 13, name: 'Karan Bhatia', role: 'All-Rounder', meta: 'RHB', img: 'images/squad/Karan Bhatia.png' },
-        { no: 14, name: 'Matthew Sanderson', role: 'All-Rounder', meta: '-', img: 'images/squad/Matthew Sanderson.png' }
+        { no: 13, name: 'Karan Bhatia', role: 'All-Rounder', meta: 'RHB', img: 'images/Squad/Karan Bhatia.png' },
+        { no: 14, name: 'Matthew Sanderson', role: 'All-Rounder', meta: '-', img: 'images/Squad/Matthew Sanderson.png' }
     ];
 
     document.getElementById('1st-squad-grid').innerHTML = team1.map(createPlayerCard).join('');
 
     const team2 = [
-        { no: 1, name: 'Sunraj Poojary', role: 'Wicket-Keeper', meta: '-', img: 'images/squad/Sunraj Poojary.png' },
-        { no: 2, name: 'Ollie Liddiard', role: 'Batsman', meta: '-', img: 'images/squad/Ollie Liddiard.png' },
-        { no: 3, name: 'Arif Khan', role: 'All-Rounder', meta: '-', img: 'images/squad/Arif Khan.png' },
-        { no: 4, name: 'Sreejayan Thoppil', role: 'Batsman', meta: '-', img: 'images/squad/Sreejayan Thoppil.png' },
-        { no: 5, name: 'Amit Sisodia', role: 'All-Rounder', meta: '-', img: 'images/squad/Amit Sisodia.png' },
-        { no: 6, name: 'Himanshu Haldar', role: 'Player', meta: '-', img: 'images/squad/Himanshu Haldar.png' },
-        { no: 7, name: 'Aniket Kulkarni', role: 'All-Rounder', meta: '-', img: 'images/squad/Aniket Kulkarni.png' },
+        { no: 1, name: 'Sunraj Poojary', role: 'Wicket-Keeper', meta: '-', img: 'images/Squad/Sunraj Poojary.png' },
+        { no: 2, name: 'Ollie Liddiard', role: 'Batsman', meta: '-', img: 'images/Squad/Ollie Liddiard.png' },
+        { no: 3, name: 'Arif Khan', role: 'All-Rounder', meta: '-', img: 'images/Squad/Arif Khan.png' },
+        { no: 4, name: 'Sreejayan Thoppil', role: 'Batsman', meta: '-', img: 'images/Squad/Sreejayan Thoppil.png' },
+        { no: 5, name: 'Amit Sisodia', role: 'All-Rounder', meta: '-', img: 'images/Squad/Amit Sisodia.png' },
+        { no: 6, name: 'Himanshu Haldar', role: 'Player', meta: '-', img: 'images/Squad/Himanshu Haldar.png' },
+        { no: 7, name: 'Aniket Kulkarni', role: 'All-Rounder', meta: '-', img: 'images/Squad/Aniket Kulkarni.png' },
         { no: 8, name: 'Pratham Bedre', role: 'Batsman', meta: '-' },
-        { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/squad/Anurag pandey.png' },
-        { no: 10, name: 'Vidit Gupta', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/squad/Vidit Gupta.png' },
+        { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag pandey.png' },
+        { no: 10, name: 'Vidit Gupta', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vidit Gupta.png' },
         { no: 11, name: 'Ranjodh Singh', role: 'Batsman', meta: '-' },
         { no: 12, name: 'Md Tusher Sarker', role: 'All-Rounder', meta: '-' },
         { no: 13, name: 'Rohit Keshri', role: 'Batsman', meta: '-' },
         { no: 14, name: 'Sumit Chaudhary', role: 'Bowler', meta: '-' },
-        { no: 15, name: 'Srinivasa Gopalakrishna', role: 'Bowler', meta: '-', img: 'images/squad/Srinivasa Gopalakrishna.png' },
+        { no: 15, name: 'Srinivasa Gopalakrishna', role: 'Bowler', meta: '-', img: 'images/Squad/Srinivasa Gopalakrishna.png' },
         { no: 16, name: 'Wasim Warne', role: 'Bowler', meta: '-' },
         { no: 17, name: 'Rohit Gupta', role: 'Batsman', meta: '-' },
         { no: 18, name: 'Shyam Nadella', role: 'Bowler', meta: '-' },
         { no: 19, name: 'Roshan Ramakrishnan', role: 'Bowler', meta: '-' },
         { no: 20, name: 'Md Tawsif', role: 'Bowler', meta: '-' },
-        { no: 21, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/squad/uttam nakade.png' }
+        { no: 21, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/Squad/uttam nakade.png' }
     ];
 
     document.getElementById('2nd-squad-grid').innerHTML = team2.map(createPlayerCard).join('');
 
     const officials = [
-        { name: 'Atish More', role: 'Chairperson', badgeCls: 'badge-gold', email: 'atishsmore@gmail.com', phone: '07871571260', img: 'images/squad/Atish More.png' },
-        { name: 'Rohit Miglani', role: 'Club Safeguarding Officer', badgeCls: 'badge-green', email: '[Placeholder]', img: 'images/squad/Rohit Miglani.png' },
-        { name: 'Joshith G', role: 'Div Rep / Hon Sec', badgeCls: 'badge-primary', email: '[Placeholder]', phone: '07786589595', img: 'images/squad/Joshith G.png' },
-        { name: 'Rohit Miglani', role: 'Hon. Fixture Secretary', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Rohit Miglani.png' },
-        { name: 'Karan Bhatia', role: 'Hon. Treasurer', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Karan Bhatia.png' },
-        { name: 'Vikram Sharma', role: 'Captain — 1st XI', badgeCls: 'badge-gold', cp: true, email: 'vikraminfy@gmail.com', img: 'images/squad/Vikram Sharma.png' },
-        { name: 'Vidit Gupta', role: 'Captain — 2nd XI', badgeCls: 'badge-gold', cp: true, email: '[Placeholder]', img: 'images/squad/Vidit Gupta.png' },
+        { name: 'Atish More', role: 'Chairperson', badgeCls: 'badge-gold', email: 'atishsmore@gmail.com', phone: '07871571260', img: 'images/Squad/Atish More.png' },
+        { name: 'Rohit Miglani', role: 'Club Safeguarding Officer', badgeCls: 'badge-green', email: '[Placeholder]', img: 'images/Squad/Rohit Miglani.png' },
+        { name: 'Joshith G', role: 'Div Rep / Hon Sec', badgeCls: 'badge-primary', email: '[Placeholder]', phone: '07786589595', img: 'images/Squad/Joshith G.png' },
+        { name: 'Rohit Miglani', role: 'Hon. Fixture Secretary', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/Squad/Rohit Miglani.png' },
+        { name: 'Karan Bhatia', role: 'Hon. Treasurer', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/Squad/Karan Bhatia.png' },
+        { name: 'Vikram Sharma', role: 'Captain — 1st XI', badgeCls: 'badge-gold', cp: true, email: 'vikraminfy@gmail.com', img: 'images/Squad/Vikram Sharma.png' },
+        { name: 'Vidit Gupta', role: 'Captain — 2nd XI', badgeCls: 'badge-gold', cp: true, email: '[Placeholder]', img: 'images/Squad/Vidit Gupta.png' },
         { name: 'Hemanth Maddela', role: 'Playcricket/Spond Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Hemanth Maddela.png' },
         { name: 'Arif Khan', role: 'Website Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Arif Khan.png' }
     ];
