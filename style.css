@@ -230,6 +230,27 @@ h1, h2, h3, h4, h5, h6 {
   .btn-join { display: none; }
   .hamburger { display: flex; margin-left: auto; }
   .nav-container { height: 70px; }
+  
+  /* Reset absolute dropdowns for mobile */
+  .mobile-links .dropdown {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      box-shadow: none;
+      border: none;
+      padding: 0;
+      width: 100%;
+      display: none; /* Controlled by toggle label */
+      background: transparent;
+      backdrop-filter: none;
+  }
+  .mobile-links .dropdown.active {
+      display: block;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border-left: 2px solid var(--accent-primary);
+  }
 }
 
 /* HERO SECTION */

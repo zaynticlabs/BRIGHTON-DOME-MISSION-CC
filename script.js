@@ -429,14 +429,19 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1st XI Exact 2026 Fixtures
     const opps1 = [
         { date: '18 APR', opp: 'Slinfold CC (Friendly)', isHome: false, venue: 'Wicket Gardens', comp: 'Friendly', time: '13:00' },
+        { date: '04 MAY', opp: 'Brighton Zalmi CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
         { date: '09 MAY', opp: 'Hastings & St L Priory 2', isHome: false, venue: 'Horntye Park', comp: 'League', time: '12:30' },
         { date: '16 MAY', opp: 'Chiddingly CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: '18 MAY', opp: 'Poynings CC', isHome: false, venue: 'Poynings CC', comp: 'T20', time: '18:00' },
         { date: '23 MAY', opp: 'Crowhurst Park CC', isHome: false, venue: 'Crowhurst Park CC', comp: 'League', time: '12:30' },
         { date: '30 MAY', opp: 'Seaford CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: '01 JUN', opp: 'Preston Park CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
         { date: '06 JUN', opp: 'Brighton & Hove 2', isHome: false, venue: 'Nevill Sports Ground', comp: 'League', time: '12:30' },
         { date: '13 JUN', opp: 'Herstmonceux CC', isHome: false, venue: 'Herstmonceux', comp: 'League', time: '12:30' },
+        { date: '15 JUN', opp: 'St Peters Spartans', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
         { date: '20 JUN', opp: 'Isfield CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
         { date: '27 JUN', opp: 'Portslade CC', isHome: false, venue: 'Benfield Valley Pavilion', comp: 'League', time: '12:30' },
+        { date: '29 JUN', opp: 'Shoreham by Sea CC', isHome: false, venue: 'Shoreham by Sea CC', comp: 'T20', time: '18:00' },
         { date: '04 JUL', opp: 'Heathfield Park CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
         { date: '11 JUL', opp: 'Hastings & St L Priory 2', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
         { date: '18 JUL', opp: 'Chiddingly CC', isHome: false, venue: 'Chiddingly CC', comp: 'League', time: '12:30' },
@@ -452,6 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2nd XI Exact 2026 Fixtures
     const opps2 = [
         { date: '09 MAY', opp: 'Balcombe CC 2', isHome: false, venue: 'Balcombe CC Main', comp: 'League', time: '13:00' },
+        { date: '10 MAY', opp: 'Ardingly CC 1', isHome: false, venue: 'Ardingly', comp: 'T20', time: '14:00' },
         { date: '16 MAY', opp: 'Smallfield Manor 2', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
         { date: '23 MAY', opp: 'Mid Sussex Heathens 1', isHome: false, venue: 'Ansty North Ground', comp: 'League', time: '13:00' },
         { date: '30 MAY', opp: 'Crawley Eagles 5', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
