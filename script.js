@@ -623,8 +623,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { name: 'Karan Bhatia', role: 'Hon. Treasurer', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/Squad/Karan Bhatia.png' },
         { name: 'Vikram Sharma', role: 'Captain — 1st XI', badgeCls: 'badge-gold', cp: true, email: 'vikraminfy@gmail.com', img: 'images/Squad/Vikram Sharma.png' },
         { name: 'Vidit Gupta', role: 'Captain — 2nd XI', badgeCls: 'badge-gold', cp: true, email: '[Placeholder]', img: 'images/Squad/Vidit Gupta.png' },
-        { name: 'Hemanth Maddela', role: 'Playcricket/Spond Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Hemanth Maddela.png' },
-        { name: 'Arif Khan', role: 'Website Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/squad/Arif Khan.png' }
+        { name: 'Hemanth Maddela', role: 'Playcricket/Spond Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/Squad/Hemanth Maddela.png' },
+        { name: 'Arif Khan', role: 'Website Administrator', badgeCls: 'badge-primary', email: '[Placeholder]', img: 'images/Squad/Arif Khan.png' }
     ];
 
     document.getElementById('officials-grid').innerHTML = officials.map(createPlayerCard).join('');
