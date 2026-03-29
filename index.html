@@ -420,31 +420,31 @@
 
                 <div class="folder-grid mt-2">
                     <div class="folder-card glass-card" data-folder="agm-2026">
-                        <div class="folder-icon">📁</div>
+                        <div class="folder-thumbnail" style="background-image: url('images/AGM/Ollie.jpg');"></div>
                         <h4 class="folder-name">AGM 2026 Photos</h4>
-                        <div class="folder-count badge badge-primary">2 Photos</div>
-                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                        <div class="folder-count badge badge-primary">17 Photos</div>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Click here to view pics</button>
                     </div>
                     
                     <div class="folder-card glass-card" data-folder="awards">
                         <div class="folder-icon">📁</div>
                         <h4 class="folder-name">Awards Ceremony 2025</h4>
                         <div class="folder-count badge badge-grey">0 Photos</div>
-                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Click here to view pics</button>
                     </div>
                     
                     <div class="folder-card glass-card" data-folder="1st-photos">
                         <div class="folder-icon">📁</div>
                         <h4 class="folder-name">1st XI Match Photos</h4>
                         <div class="folder-count badge badge-grey">0 Photos</div>
-                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Click here to view pics</button>
                     </div>
                     
                     <div class="folder-card glass-card" data-folder="2nd-photos">
                         <div class="folder-icon">📁</div>
                         <h4 class="folder-name">2nd XI Match Photos</h4>
                         <div class="folder-count badge badge-grey">0 Photos</div>
-                        <button class="btn btn-primary btn-sm mt-1 block w-100">Browse</button>
+                        <button class="btn btn-primary btn-sm mt-1 block w-100">Click here to view pics</button>
                     </div>
                 </div>
 
@@ -638,7 +638,7 @@
                                 
                                 <!-- RIGHT COL (Using Mailto action natively) -->
                                 <div class="contact-form-wrapper glass-card">
-                                    <form id="contact-form" class="styled-form" action="mailto:domemission7@gmail.com" method="POST" enctype="text/plain">
+                                    <form id="contact-form" class="styled-form" action="https://formspree.io/f/domemission7@gmail.com" method="POST">
                                         <div class="form-group">
                                             <label for="c-name">Full Name *</label>
                                             <input type="text" id="c-name" name="Name" required>
@@ -666,9 +666,9 @@
                                             <label for="c-msg">Message *</label>
                                             <textarea id="c-msg" name="Message_Body" rows="4" required></textarea>
                                         </div>
-                                        <button type="submit" class="btn btn-primary block w-100">Send via Email Client</button>
+                                        <button type="submit" class="btn btn-primary block w-100">Send Message</button>
                                         <div class="form-success text-green mt-1 d-none" id="contact-success">
-                                            ✅ Mail client opened. Thanks!
+                                            ✅ Message sent successfully. We'll be in touch!
                                         </div>
                                     </form>
                                 </div>
@@ -687,7 +687,7 @@
                             </div>
 
                             <div class="contact-form-wrapper glass-card form-wide">
-                                <form id="join-form" class="styled-form grid form-grid" action="mailto:domemission7@gmail.com" method="POST" enctype="text/plain">
+                                <form id="join-form" class="styled-form grid form-grid" action="https://formspree.io/f/domemission7@gmail.com" method="POST">
                                     <div class="form-group">
                                         <label for="j-name">Full Name *</label>
                                         <input type="text" id="j-name" name="Name" required>
@@ -762,7 +762,10 @@
                                         <textarea id="j-msg" name="Addl_Info" rows="2"></textarea>
                                     </div>
                                     <div class="form-group form-col-span2 mt-1">
-                                        <button type="submit" class="btn btn-primary block w-100">Send via Email Client</button>
+                                        <button type="submit" class="btn btn-primary block w-100">Submit Application</button>
+                                        <div class="form-success text-green mt-1 d-none" id="join-success">
+                                            ✅ Application received! We'll be in touch soon.
+                                        </div>
                                     </div>
                                 </form>
                             </div>

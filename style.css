@@ -392,7 +392,8 @@ tr:hover td { background: var(--bg-surface); }
 /* SQUAD / OFFICIALS GRID */
 .squad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1.5rem; padding-top: 1rem; }
 .player-card { text-align: center; position: relative; overflow: hidden; }
-.player-avatar { width: 100px; height: 100px; background: var(--bg-surface); border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; border: 2px solid var(--border-color); position: relative; }
+.player-avatar { width: 100px; height: 100px; background: var(--bg-surface); border-radius: 50%; margin: 0 auto 1rem auto; display: flex; align-items: center; justify-content: center; border: 2px solid var(--border-color); position: relative; overflow: hidden; }
+.player-photo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 .helmet-silhouette { width: 50px; height: 50px; background: var(--text-secondary); -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10C27.9 10 10 27.9 10 50v30h80V50c0-22.1-17.9-40-40-40zm30 60H20V50c0-16.5 13.5-30 30-30s30 13.5 30 30v20z"/><path d="M20 60h60v10H20z"/></svg>') no-repeat center; mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10C27.9 10 10 27.9 10 50v30h80V50c0-22.1-17.9-40-40-40zm30 60H20V50c0-16.5 13.5-30 30-30s30 13.5 30 30v20z"/><path d="M20 60h60v10H20z"/></svg>') no-repeat center; }
 .jersey-number { position: absolute; top: 10px; right: 10px; background: var(--accent-primary); color: white; font-family: var(--font-orbitron); width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.9rem; }
 .player-name { font-size: 1.2rem; margin-bottom: 0.5rem; }
@@ -415,9 +416,28 @@ tr:hover td { background: var(--bg-surface); }
 
 /* MEDIA FOLDERS */
 .folder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
-.folder-card { text-align: center; cursor: pointer; transition: transform 0.3s, border-color 0.3s; }
+.folder-card { text-align: center; cursor: pointer; transition: transform 0.3s, border-color 0.3s; padding: 1rem; }
 .folder-card:hover, .folder-card.active { transform: translateY(-5px); border-color: var(--accent-primary); }
 .folder-icon { font-size: 4rem; margin-bottom: 0.5rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05)); }
+.folder-thumbnail { 
+    width: 100%; aspect-ratio: 4/3; 
+    background-size: cover; background-position: center; 
+    border-radius: 8px; margin-bottom: 1rem; 
+    border: 2px solid transparent; transition: all 0.3s ease;
+    position: relative; overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.folder-card:hover .folder-thumbnail { border-color: var(--accent-primary); transform: scale(1.02); }
+.folder-thumbnail::after {
+    content: 'View Album';
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(37, 99, 235, 0.4); /* Primary accent with opacity */
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: opacity 0.3s;
+    color: white; font-weight: bold; font-family: var(--font-heading);
+    backdrop-filter: blur(2px);
+}
+.folder-card:hover .folder-thumbnail::after { opacity: 1; }
 .folder-name { margin-bottom: 0.5rem; }
 .gallery-panel { display: none; overflow: hidden; padding: 1.5rem; }
 .gallery-panel.active { display: block; animation: expandDown 0.4s ease; }
