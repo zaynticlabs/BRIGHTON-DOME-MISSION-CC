@@ -285,7 +285,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-badge { display: inline-block; font-family: var(--font-orbitron); color: var(--accent-gold); font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 1rem; }
 .hero-title { font-size: clamp(2.5rem, 8vw, 6rem); text-transform: uppercase; line-height: 0.9; margin-bottom: 1rem; }
 .line1 { color: inherit; }
-.line2 { background: linear-gradient(to right, var(--accent-primary), var(--accent-light)); -webkit-background-clip: text; color: transparent; }
+.line2 { background: linear-gradient(to right, var(--accent-primary), var(--accent-light)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 .tagline-rotator { height: 2rem; position: relative; margin-bottom: 1.5rem; font-family: var(--font-heading); font-size: 1.5rem; color: var(--accent-gold); }
 .tagline { position: absolute; width: 100%; top: 0; left: 0; opacity: 0; transform: translateY(10px); transition: all 0.5s ease; }
