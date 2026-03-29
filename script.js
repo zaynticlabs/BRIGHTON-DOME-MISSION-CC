@@ -105,7 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     const section = document.getElementById(sectionId);
                     if (section) {
                         const btn = section.querySelector(`.tab-btn[data-target="${tabTarget}"]`);
-                        if (btn) btn.click();
+                        if (btn) {
+                            // Small delay ensures the menu starts closing before tab switches
+                            setTimeout(() => {
+                                btn.click();
+                            }, 150);
+                        }
                     }
                 }
 
@@ -658,7 +663,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { no: 6, name: 'Himanshu Haldar', role: 'Player', meta: '-', img: 'images/Squad/Himanshu Haldar.png' },
         { no: 7, name: 'Aniket Kulkarni', role: 'All-Rounder', meta: '-', img: 'images/Squad/Aniket Kulkarni.png' },
         { no: 8, name: 'Pratham Bedre', role: 'Batsman', meta: '-' },
-        { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag pandey.png' },
+        { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag Pandey.png' },
         { no: 10, name: 'Vidit Gupta', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vidit Gupta.png' },
         { no: 11, name: 'Ranjodh Singh', role: 'Batsman', meta: '-' },
         { no: 12, name: 'Md Tusher Sarker', role: 'All-Rounder', meta: '-' },
@@ -670,7 +675,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { no: 18, name: 'Shyam Nadella', role: 'Bowler', meta: '-' },
         { no: 19, name: 'Roshan Ramakrishnan', role: 'Bowler', meta: '-' },
         { no: 20, name: 'Md Tawsif', role: 'Bowler', meta: '-' },
-        { no: 21, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/Squad/uttam nakade.png' }
+        { no: 21, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/Squad/Uttam Nakade.png' }
     ];
 
     document.getElementById('2nd-squad-grid').innerHTML = team2.map(createPlayerCard).join('');
