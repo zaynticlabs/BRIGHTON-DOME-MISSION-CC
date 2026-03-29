@@ -68,27 +68,64 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinksContainer = document.querySelector('.mobile-links');
     const desktopLinks = document.querySelector('.nav-links');
 
-    // Clone desktop links to mobile menu
     if (desktopLinks && mobileLinksContainer) {
         mobileLinksContainer.innerHTML = desktopLinks.innerHTML;
 
-        // Fix dropdowns for mobile
-        const mobileDropdownParents = mobileLinksContainer.querySelectorAll('.dropdown-parent > a');
-        mobileDropdownParents.forEach(link => {
+        const allMobileLinks = mobileLinksContainer.querySelectorAll('a');
+        allMobileLinks.forEach(link => {
             link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const dropdown = link.nextElementSibling;
-                dropdown.classList.toggle('active');
-                dropdown.classList.toggle('mobile-dropdown');
-            });
-        });
+                const href = link.getAttribute('href');
+                const isAnchor = href && href.startsWith('#');
+                const isDropdownParent = link.parentElement.classList.contains('dropdown-parent');
 
-        // Close menu on normal link click
-        mobileLinksContainer.querySelectorAll('a:not([href="#matches"]):not([href="#teams"]):not([href="#media"]):not([href="#information"]):not([href="#contact"])').forEach(link => {
-            link.addEventListener('click', () => {
+                // If it's a dropdown parent on mobile, toggle it
+                if (isDropdownParent && link.nextElementSibling?.classList.contains('dropdown')) {
+                    const dropdown = link.nextElementSibling;
+                    const isActive = dropdown.classList.contains('active');
+                    
+                    // On mobile, first click opens dropdown, if it's just # or same page
+                    if (window.innerWidth < 1024) {
+                        if (!isActive) {
+                            e.preventDefault();
+                            dropdown.classList.add('active', 'mobile-dropdown');
+                            return; // Don't close menu yet
+                        }
+                    }
+                }
+
+                // For all other cases, or second click on parent - close menu
                 hamburger.classList.remove('active');
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
+
+                // Handle Tab switching if link has data-tab
+                const tabTarget = link.getAttribute('data-tab');
+                if (tabTarget && isAnchor) {
+                    const sectionId = href.substring(1);
+                    const section = document.getElementById(sectionId);
+                    if (section) {
+                        const btn = section.querySelector(`.tab-btn[data-target="${tabTarget}"]`);
+                        if (btn) btn.click();
+                    }
+                }
+
+                // If it's an anchor, handle smooth scroll with offset
+                if (isAnchor && href !== '#') {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        const offset = 80;
+                        const bodyRect = document.body.getBoundingClientRect().top;
+                        const elementRect = target.getBoundingClientRect().top;
+                        const elementPosition = elementRect - bodyRect;
+                        const offsetPosition = elementPosition - offset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             });
         });
     }
@@ -100,6 +137,29 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
         });
     }
+
+    // Global Smooth Scroll for Desktop & General Links
+    document.querySelectorAll('a[href^="#"]:not([href="#"])').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            // Only handle if not already handled by mobile logic above
+            if (this.closest('.mobile-menu')) return;
+
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                const offset = 80;
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = target.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 
     /* =========================================================
        3. HERO TEXT ROTATOR
