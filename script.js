@@ -715,7 +715,7 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
 
     /* =========================================================
-       7. FORM SUBMISSION HANDLING (Formspree)
+       7. FORM SUBMISSION HANDLING (FormSubmit.co AJAX)
     ========================================================= */
     const forms = [
         { id: 'contact-form', successId: 'contact-success' },
@@ -725,42 +725,64 @@ document.addEventListener('DOMContentLoaded', () => {
     forms.forEach(f => {
         const formEl = document.getElementById(f.id);
         const successEl = document.getElementById(f.successId);
-        
+
         if (formEl) {
             formEl.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 const btn = formEl.querySelector('button[type="submit"]');
                 const originalText = btn.textContent;
-                
-                // Set loading state
-                btn.disabled = true;
-                btn.textContent = 'Sending...';
 
+                // Loading state
+                btn.disabled = true;
+                btn.textContent = '🏏 Sending...';
+
+                // Build JSON payload from form fields
                 const formData = new FormData(formEl);
-                
+                const data = {};
+                formData.forEach((value, key) => { data[key] = value; });
+
+                // FormSubmit AJAX endpoint (replace /f/ URL with /ajax/ URL)
+                const ajaxUrl = formEl.action
+                    .replace('https://formsubmit.co/', 'https://formsubmit.co/ajax/');
+
                 try {
-                    const response = await fetch(formEl.action, {
+                    const response = await fetch(ajaxUrl, {
                         method: 'POST',
-                        body: formData,
                         headers: {
+                            'Content-Type': 'application/json',
                             'Accept': 'application/json'
-                        }
+                        },
+                        body: JSON.stringify(data)
                     });
 
-                    if (response.ok) {
+                    const result = await response.json();
+
+                    if (result.success === 'true' || result.success === true) {
+                        // Show success banner inside the form wrapper, keep page intact
                         formEl.reset();
-                        formEl.style.display = 'none'; // Hide form on success
                         successEl.classList.remove('d-none');
+                        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        btn.textContent = '✅ Sent!';
+                        // Re-enable after 5s so they can send again if needed
+                        setTimeout(() => {
+                            btn.disabled = false;
+                            btn.textContent = originalText;
+                            successEl.classList.add('d-none');
+                        }, 6000);
                     } else {
-                        const data = await response.json();
-                        alert(data.errors ? data.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form");
+                        // Inline error — no alert popup
                         btn.disabled = false;
                         btn.textContent = originalText;
+                        successEl.textContent = '❌ Something went wrong. Please try emailing us directly at domemission7@gmail.com';
+                        successEl.style.color = 'var(--error, #f87171)';
+                        successEl.classList.remove('d-none');
                     }
-                } catch (error) {
-                    alert("Oops! There was a problem submitting your form. Please check your connection.");
+                } catch (err) {
                     btn.disabled = false;
                     btn.textContent = originalText;
+                    successEl.textContent = '❌ Could not send. Please email us at domemission7@gmail.com';
+                    successEl.style.color = 'var(--error, #f87171)';
+                    successEl.classList.remove('d-none');
                 }
             });
         }
