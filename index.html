@@ -695,14 +695,19 @@
                                 
                                 <!-- RIGHT COL (Using Mailto action natively) -->
                                 <div class="contact-form-wrapper glass-card">
-                                    <form id="contact-form" class="styled-form" action="https://formspree.io/f/domemission7@gmail.com" method="POST">
+                                    <form id="contact-form" class="styled-form" action="https://formsubmit.co/domemission7@gmail.com" method="POST">
+                                        <!-- FormSubmit configuration -->
+                                        <input type="hidden" name="_subject" value="New Contact Enquiry — Dome Mission CC">
+                                        <input type="hidden" name="_captcha" value="false">
+                                        <input type="hidden" name="_next" value="https://brightondome.co.uk/#contact">
+                                        <input type="text" name="_honey" style="display:none">
                                         <div class="form-group">
                                             <label for="c-name">Full Name *</label>
                                             <input type="text" id="c-name" name="Name" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="c-email">Your Email Address</label>
-                                            <input type="email" id="c-email" name="Reply_To">
+                                            <input type="email" id="c-email" name="_replyto">
                                         </div>
                                         <div class="form-group">
                                             <label for="c-phone">Phone Number</label>
@@ -721,7 +726,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="c-msg">Message *</label>
-                                            <textarea id="c-msg" name="Message_Body" rows="4" required></textarea>
+                                            <textarea id="c-msg" name="Message" rows="4" required></textarea>
                                         </div>
                                         <button type="submit" class="btn btn-primary block w-100">Send Message</button>
                                         <div class="form-success text-green mt-1 d-none" id="contact-success">
@@ -744,7 +749,12 @@
                             </div>
 
                             <div class="contact-form-wrapper glass-card form-wide">
-                                <form id="join-form" class="styled-form grid form-grid" action="https://formspree.io/f/domemission7@gmail.com" method="POST">
+                                <form id="join-form" class="styled-form grid form-grid" action="https://formsubmit.co/domemission7@gmail.com" method="POST">
+                                    <!-- FormSubmit configuration -->
+                                    <input type="hidden" name="_subject" value="New Joining Application — Dome Mission CC">
+                                    <input type="hidden" name="_captcha" value="false">
+                                    <input type="hidden" name="_next" value="https://brightondome.co.uk/#contact">
+                                    <input type="text" name="_honey" style="display:none">
                                     <div class="form-group">
                                         <label for="j-name">Full Name *</label>
                                         <input type="text" id="j-name" name="Name" required>
