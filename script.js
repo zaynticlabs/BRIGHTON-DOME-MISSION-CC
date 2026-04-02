@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (isDropdownParent && link.nextElementSibling?.classList.contains('dropdown')) {
                     const dropdown = link.nextElementSibling;
                     const isActive = dropdown.classList.contains('active');
-                    
+
                     // On mobile, first click opens dropdown, if it's just # or same page
                     if (window.innerWidth < 1024) {
                         if (!isActive) {
@@ -660,7 +660,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { no: 3, name: 'Arif Khan', role: 'All-Rounder', meta: '-', img: 'images/Squad/Arif Khan.png' },
         { no: 4, name: 'Sreejayan Thoppil', role: 'Batsman', meta: '-', img: 'images/Squad/Sreejayan Thoppil.png' },
         { no: 5, name: 'Amit Sisodia', role: 'All-Rounder', meta: '-', img: 'images/Squad/Amit Sisodia.png' },
-        { no: 6, name: 'Himanshu Haldar', role: 'Player', meta: '-', img: 'images/Squad/Himanshu Haldar.png' },
+        { no: 6, name: 'Himanshu Haldar', role: 'Batsman', meta: '-', img: 'images/Squad/Himanshu Haldar.png' },
         { no: 7, name: 'Aniket Kulkarni', role: 'All-Rounder', meta: '-', img: 'images/Squad/Aniket Kulkarni.png' },
         { no: 8, name: 'Pratham Bedre', role: 'Batsman', meta: '-' },
         { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag Pandey.png' },
