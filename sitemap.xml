@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Matches section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#matches</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Teams section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#teams</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- News section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#news</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Media section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#media</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Club Information section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#information</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Contact section -->
+  <url>
+    <loc>https://www.brightondomemissioncc.co.uk/#contact</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
