@@ -506,55 +506,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // 1st XI Exact 2026 Fixtures
+    // 1st XI Exact 2026 Fixtures (from play-cricket.com)
     const opps1 = [
-        { date: '18 APR', opp: 'Slinfold CC (Friendly)', isHome: false, venue: 'Wicket Gardens', comp: 'Friendly', time: '13:00' },
-        { date: '04 MAY', opp: 'Brighton Zalmi CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
-        { date: '09 MAY', opp: 'Hastings & St L Priory 2', isHome: false, venue: 'Horntye Park', comp: 'League', time: '12:30' },
-        { date: '16 MAY', opp: 'Chiddingly CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '18 MAY', opp: 'Poynings CC', isHome: false, venue: 'Poynings CC', comp: 'T20', time: '18:00' },
-        { date: '23 MAY', opp: 'Crowhurst Park CC', isHome: false, venue: 'Crowhurst Park CC', comp: 'League', time: '12:30' },
-        { date: '30 MAY', opp: 'Seaford CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '01 JUN', opp: 'Preston Park CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
-        { date: '06 JUN', opp: 'Brighton & Hove 2', isHome: false, venue: 'Nevill Sports Ground', comp: 'League', time: '12:30' },
-        { date: '13 JUN', opp: 'Herstmonceux CC', isHome: false, venue: 'Herstmonceux', comp: 'League', time: '12:30' },
-        { date: '15 JUN', opp: 'St Peters Spartans', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
-        { date: '20 JUN', opp: 'Isfield CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '27 JUN', opp: 'Portslade CC', isHome: false, venue: 'Benfield Valley Pavilion', comp: 'League', time: '12:30' },
-        { date: '29 JUN', opp: 'Shoreham by Sea CC', isHome: false, venue: 'Shoreham by Sea CC', comp: 'T20', time: '18:00' },
-        { date: '04 JUL', opp: 'Heathfield Park CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '11 JUL', opp: 'Hastings & St L Priory 2', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '18 JUL', opp: 'Chiddingly CC', isHome: false, venue: 'Chiddingly CC', comp: 'League', time: '12:30' },
-        { date: '25 JUL', opp: 'Crowhurst Park CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '01 AUG', opp: 'Seaford CC', isHome: false, venue: 'The Salts', comp: 'League', time: '12:30' },
-        { date: '08 AUG', opp: 'Brighton & Hove 2', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '15 AUG', opp: 'Herstmonceux CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '22 AUG', opp: 'Isfield CC', isHome: false, venue: 'The Gudges', comp: 'League', time: '12:30' },
-        { date: '29 AUG', opp: 'Portslade CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
-        { date: '05 SEP', opp: 'Heathfield Park CC', isHome: false, venue: 'Heathfield Park', comp: 'League', time: '12:30' }
+        { date: 'SAT 02 MAY', opp: 'Lindfield CC (T20)', isHome: false, venue: 'Lindfield Common', comp: 'T20', time: '12:00' },
+        { date: 'THU 07 MAY', opp: 'Brighton Zalmi CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
+        { date: 'SAT 09 MAY', opp: 'Hastings & St L Priory 2', isHome: false, venue: 'Horntye Park', comp: 'League', time: '12:30' },
+        { date: 'SAT 16 MAY', opp: 'Chiddingly CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'THU 21 MAY', opp: 'Poynings CC', isHome: false, venue: 'Poynings CC', comp: 'T20', time: '18:00' },
+        { date: 'SAT 23 MAY', opp: 'Crowhurst Park CC', isHome: false, venue: 'Crowhurst Park CC', comp: 'League', time: '12:30' },
+        { date: 'SAT 30 MAY', opp: 'Seaford CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'THU 04 JUN', opp: 'Preston Park CC', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
+        { date: 'SAT 06 JUN', opp: 'Brighton & Hove 2', isHome: false, venue: 'Nevill Sports Ground', comp: 'League', time: '12:30' },
+        { date: 'SAT 13 JUN', opp: 'Herstmonceux CC', isHome: false, venue: 'Herstmonceux Recreation Ground', comp: 'League', time: '12:30' },
+        { date: 'THU 18 JUN', opp: 'St Peters Spartans', isHome: true, venue: 'Horsdean', comp: 'T20', time: '18:00' },
+        { date: 'SAT 20 JUN', opp: 'Isfield CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 27 JUN', opp: 'Portslade CC', isHome: false, venue: 'Benfield Valley Pavilion', comp: 'League', time: '12:30' },
+        { date: 'TUE 30 JUN', opp: 'Shoreham by Sea CC', isHome: false, venue: 'Shoreham by Sea CC', comp: 'T20', time: '18:00' },
+        { date: 'SAT 04 JUL', opp: 'Heathfield Park CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 11 JUL', opp: 'Hastings & St L Priory 2', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 18 JUL', opp: 'Chiddingly CC', isHome: false, venue: 'Chiddingly Cricket Club', comp: 'League', time: '12:30' },
+        { date: 'SAT 25 JUL', opp: 'Crowhurst Park CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 01 AUG', opp: 'Seaford CC', isHome: false, venue: 'The Salts', comp: 'League', time: '12:30' },
+        { date: 'SAT 08 AUG', opp: 'Brighton & Hove 2', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 15 AUG', opp: 'Herstmonceux CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 22 AUG', opp: 'Isfield CC', isHome: false, venue: 'The Gudges', comp: 'League', time: '12:30' },
+        { date: 'SAT 29 AUG', opp: 'Portslade CC', isHome: true, venue: 'Horsdean', comp: 'League', time: '12:30' },
+        { date: 'SAT 05 SEP', opp: 'Heathfield Park CC', isHome: false, venue: 'Heathfield Park Cricket Club', comp: 'League', time: '12:30' }
     ];
 
-    // 2nd XI Exact 2026 Fixtures
+    // 2nd XI Exact 2026 Fixtures (from play-cricket.com)
     const opps2 = [
-        { date: '09 MAY', opp: 'Balcombe CC 2', isHome: false, venue: 'Balcombe CC Main', comp: 'League', time: '13:00' },
-        { date: '10 MAY', opp: 'Ardingly CC 1', isHome: false, venue: 'Ardingly', comp: 'T20', time: '14:00' },
-        { date: '16 MAY', opp: 'Smallfield Manor 2', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '23 MAY', opp: 'Mid Sussex Heathens 1', isHome: false, venue: 'Ansty North Ground', comp: 'League', time: '13:00' },
-        { date: '30 MAY', opp: 'Crawley Eagles 5', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '06 JUN', opp: 'Gully Cricketers 1', isHome: false, venue: 'Chailey Cricket Ground', comp: 'League', time: '13:00' },
-        { date: '13 JUN', opp: 'Lindfield CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '20 JUN', opp: 'Steyning CC 3', isHome: false, venue: 'Upper Beeding Recreation Ground', comp: 'League', time: '13:00' },
-        { date: '27 JUN', opp: 'Ansty CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '04 JUL', opp: 'Hurstpierpoint CC 2', isHome: false, venue: 'Hurstpierpoint CC', comp: 'League', time: '13:00' },
-        { date: '11 JUL', opp: 'Balcombe CC 2', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '18 JUL', opp: 'Smallfield Manor 2', isHome: false, venue: 'Plough Road', comp: 'League', time: '13:00' },
-        { date: '25 JUL', opp: 'Mid Sussex Heathens 1', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '01 AUG', opp: 'Crawley Eagles 5', isHome: false, venue: 'Bewbush Green Playing Fields', comp: 'League', time: '13:00' },
-        { date: '08 AUG', opp: 'Gully Cricketers 1', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '15 AUG', opp: 'Lindfield CC 3', isHome: false, venue: 'Hickmans Lane', comp: 'League', time: '13:00' },
-        { date: '22 AUG', opp: 'Steyning CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
-        { date: '29 AUG', opp: 'Ansty CC 3', isHome: false, venue: 'Ansty - North Ground', comp: 'League', time: '12:30' },
-        { date: '05 SEP', opp: 'Hurstpierpoint CC 2', isHome: true, venue: 'Braypool', comp: 'League', time: '12:30' }
+        { date: 'SAT 09 MAY', opp: 'Balcombe CC 2', isHome: false, venue: 'Balcombe CC Main', comp: 'League', time: '13:00' },
+        { date: 'SUN 10 MAY', opp: 'Ardingly CC 1', isHome: false, venue: 'Ardingly', comp: 'T20', time: '14:00' },
+        { date: 'SAT 16 MAY', opp: 'Smallfield Manor 2', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 23 MAY', opp: 'Mid Sussex Heathens 1', isHome: false, venue: 'Ansty North Ground', comp: 'League', time: '13:00' },
+        { date: 'SAT 30 MAY', opp: 'Crawley Eagles 5', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 06 JUN', opp: 'Gully Cricketers 1', isHome: false, venue: 'Chailey Cricket Ground', comp: 'League', time: '13:00' },
+        { date: 'SAT 13 JUN', opp: 'Lindfield CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 20 JUN', opp: 'Steyning CC 3', isHome: false, venue: 'Upper Beeding Recreation Ground', comp: 'League', time: '13:00' },
+        { date: 'SAT 27 JUN', opp: 'Ansty CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 04 JUL', opp: 'Hurstpierpoint CC 2', isHome: false, venue: 'Hurstpierpoint CC', comp: 'League', time: '13:00' },
+        { date: 'SAT 11 JUL', opp: 'Balcombe CC 2', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 18 JUL', opp: 'Smallfield Manor 2', isHome: false, venue: 'Plough Road', comp: 'League', time: '13:00' },
+        { date: 'SAT 25 JUL', opp: 'Mid Sussex Heathens 1', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 01 AUG', opp: 'Crawley Eagles 5', isHome: false, venue: 'Bewbush Green Playing Fields', comp: 'League', time: '13:00' },
+        { date: 'SAT 08 AUG', opp: 'Gully Cricketers 1', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 15 AUG', opp: 'Lindfield CC 3', isHome: false, venue: 'Hickmans Lane', comp: 'League', time: '13:00' },
+        { date: 'SAT 22 AUG', opp: 'Steyning CC 3', isHome: true, venue: 'Braypool', comp: 'League', time: '13:00' },
+        { date: 'SAT 29 AUG', opp: 'Ansty CC 3', isHome: false, venue: 'Ansty - North Ground', comp: 'League', time: '12:30' },
+        { date: 'SAT 05 SEP', opp: 'Hurstpierpoint CC 2', isHome: true, venue: 'Braypool', comp: 'League', time: '12:30' }
     ];
 
     generateFixtures('1st-fixtures-body', opps1);
@@ -637,19 +637,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const team1 = [
         { no: 1, name: 'Girija Shankar Barla', role: 'Batsman', meta: '-', img: 'images/Squad/Girija Shankar Barla.png' },
-        { no: 2, name: 'Ashutosh Sharma', role: 'Batsman', meta: '-', img: 'images/Squad/Ashutosh Sharma.png' },
-        { no: 3, name: 'Shahzad Afzal', role: 'All-Rounder', meta: '-', img: 'images/Squad/Shahzad Afzal.png' },
-        { no: 4, name: 'Joe Gatford', role: 'Batsman', meta: '-', img: 'images/Squad/Joe Gatford.png' },
-        { no: 5, name: 'Hemanth Maddela', role: 'All-Rounder', meta: '-', img: 'images/Squad/Hemanth Maddela.png' },
-        { no: 6, name: 'Rohit Miglani', role: 'All-Rounder', meta: '-', img: 'images/Squad/Rohit Miglani.png' },
-        { no: 7, name: 'Joshith G', role: 'Wicket-Keeper', t20: true, meta: 'Right-arm med', img: 'images/Squad/Joshith G.png' },
-        { no: 8, name: 'Vikram Sharma', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vikram Sharma.png' },
-        { no: 9, name: 'Anshul Singh Sikarwar', role: 'Bowler', meta: '-', img: 'images/Squad/Anshul Singh Sikarwar.png' },
-        { no: 10, name: 'Ankit Choudhary', role: 'Bowler', meta: '-', img: 'images/Squad/Ankit Choudhary.png' },
-        { no: 11, name: 'Atish More', role: 'Batsman', meta: 'RHB', img: 'images/Squad/Atish More.png' },
-        { no: 12, name: 'Venkat Kota', role: 'Bowler', meta: '-' },
-        { no: 13, name: 'Karan Bhatia', role: 'All-Rounder', meta: 'RHB', img: 'images/Squad/Karan Bhatia.png' },
-        { no: 14, name: 'Matthew Sanderson', role: 'All-Rounder', meta: '-', img: 'images/Squad/Matthew Sanderson.png' }
+        { no: 2, name: 'Shahzad Afzal', role: 'All-Rounder', meta: '-', img: 'images/Squad/Shahzad Afzal.png' },
+        { no: 3, name: 'Joe Gatford', role: 'Batsman', meta: '-', img: 'images/Squad/Joe Gatford.png' },
+        { no: 4, name: 'Hemanth Maddela', role: 'All-Rounder', meta: '-', img: 'images/Squad/Hemanth Maddela.png' },
+        { no: 5, name: 'Rohit Miglani', role: 'All-Rounder', meta: '-', img: 'images/Squad/Rohit Miglani.png' },
+        { no: 6, name: 'Joshith G', role: 'Wicket-Keeper', t20: true, meta: 'Right-arm med', img: 'images/Squad/Joshith G.png' },
+        { no: 7, name: 'Vikram Sharma', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vikram Sharma.png' },
+        { no: 8, name: 'Anshul Singh Sikarwar', role: 'Bowler', meta: '-', img: 'images/Squad/Anshul Singh Sikarwar.png' },
+        { no: 9, name: 'Ankit Choudhary', role: 'Bowler', meta: '-', img: 'images/Squad/Ankit Choudhary.png' },
+        { no: 10, name: 'Atish More', role: 'Batsman', meta: 'RHB', img: 'images/Squad/Atish More.png' },
+        { no: 11, name: 'Venkat Kota', role: 'Bowler', meta: '-' },
+        { no: 12, name: 'Karan Bhatia', role: 'All-Rounder', meta: 'RHB', img: 'images/Squad/Karan Bhatia.png' },
+        { no: 13, name: 'Matthew Sanderson', role: 'All-Rounder', meta: '-', img: 'images/Squad/Matthew Sanderson.png' },
+        { no: 14, name: 'Kunal Solanki', role: 'Bowler', meta: '-' }
     ];
 
     document.getElementById('1st-squad-grid').innerHTML = team1.map(createPlayerCard).join('');
@@ -662,20 +662,20 @@ document.addEventListener('DOMContentLoaded', () => {
         { no: 5, name: 'Amit Sisodia', role: 'All-Rounder', meta: '-', img: 'images/Squad/Amit Sisodia.png' },
         { no: 6, name: 'Himanshu Haldar', role: 'Batsman', meta: '-', img: 'images/Squad/Himanshu Haldar.png' },
         { no: 7, name: 'Aniket Kulkarni', role: 'All-Rounder', meta: '-', img: 'images/Squad/Aniket Kulkarni.png' },
-        { no: 8, name: 'Pratham Bedre', role: 'Batsman', meta: '-' },
-        { no: 9, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag Pandey.png' },
-        { no: 10, name: 'Vidit Gupta', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vidit Gupta.png' },
-        { no: 11, name: 'Ranjodh Singh', role: 'Batsman', meta: '-' },
-        { no: 12, name: 'Md Tusher Sarker', role: 'All-Rounder', meta: '-' },
-        { no: 13, name: 'Rohit Keshri', role: 'Batsman', meta: '-' },
-        { no: 14, name: 'Sumit Chaudhary', role: 'Bowler', meta: '-' },
-        { no: 15, name: 'Srinivasa Gopalakrishna', role: 'Bowler', meta: '-', img: 'images/Squad/Srinivasa Gopalakrishna.png' },
-        { no: 16, name: 'Wasim Warne', role: 'Bowler', meta: '-' },
-        { no: 17, name: 'Rohit Gupta', role: 'Batsman', meta: '-' },
-        { no: 18, name: 'Shyam Nadella', role: 'Bowler', meta: '-' },
-        { no: 19, name: 'Roshan Ramakrishnan', role: 'Bowler', meta: '-' },
-        { no: 20, name: 'Md Tawsif', role: 'Bowler', meta: '-' },
-        { no: 21, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/Squad/Uttam Nakade.png' }
+        { no: 8, name: 'Anurag Pandey', role: 'Bowler', meta: '-', img: 'images/Squad/Anurag Pandey.png' },
+        { no: 9, name: 'Vidit Gupta', role: 'All-Rounder', cp: true, meta: 'RHB', img: 'images/Squad/Vidit Gupta.png' },
+        { no: 10, name: 'Ranjodh Singh', role: 'Batsman', meta: '-' },
+        { no: 11, name: 'Sumit Chaudhary', role: 'Bowler', meta: '-' },
+        { no: 12, name: 'Srinivasa Gopalakrishna', role: 'Bowler', meta: '-', img: 'images/Squad/Srinivasa Gopalakrishna.png' },
+        { no: 13, name: 'Wasim Warne', role: 'Bowler', meta: '-' },
+        { no: 14, name: 'Rohit Gupta', role: 'Batsman', meta: '-' },
+        { no: 15, name: 'Shyam Nadella', role: 'Bowler', meta: '-' },
+        { no: 16, name: 'Roshan Ramakrishnan', role: 'Bowler', meta: '-' },
+        { no: 17, name: 'Md Tawsif', role: 'Bowler', meta: '-' },
+        { no: 18, name: 'Uttam Nakade', role: 'Bowler', meta: '-', img: 'images/Squad/Uttam Nakade.png' },
+        { no: 19, name: 'Jinit Bafna', role: 'Bowler', meta: '-' },
+        { no: 20, name: 'Viram Godhaniya', role: 'Bowler', meta: '-' },
+        { no: 21, name: 'Nitesh K', role: 'Bowler', meta: '-' }
     ];
 
     document.getElementById('2nd-squad-grid').innerHTML = team2.map(createPlayerCard).join('');
