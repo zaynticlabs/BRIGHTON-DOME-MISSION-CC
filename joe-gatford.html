@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPY1JQEVN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JPY1JQEVN5');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Gatford — The Pitch Whisperer | Brighton Dome Mission CC</title>
+    <meta name="description" content="Joe Gatford — Groundsman, explosive T20 batsman, and part-time artist at Brighton Dome Mission CC. Read his full player profile.">
+    <link rel="canonical" href="https://www.brightondomemissioncc.co.uk/joe-gatford.html">
+    <meta property="og:title" content="Joe Gatford | Brighton Dome Mission CC">
+    <meta property="og:description" content="Groundsman by day. Explosive batsman by evening. Meet Joe Gatford.">
+    <meta property="og:image" content="https://www.brightondomemissioncc.co.uk/images/squad/Joe-batting.jpg">
+    <link rel="icon" href="images/dome/dome-mission-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+        import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-database.js";
+        const firebaseConfig = { apiKey:"AIzaSyBJ3BSPUwxjuSCNxSVM4yyxH1Zn7YNqY2w", authDomain:"zayntic-visitor-counter.firebaseapp.com", databaseURL:"https://zayntic-visitor-counter-default-rtdb.europe-west1.firebasedatabase.app", projectId:"zayntic-visitor-counter", storageBucket:"zayntic-visitor-counter.firebasestorage.app", messagingSenderId:"842390090860", appId:"1:842390090860:web:b4fb880dffa85cfeecd449", measurementId:"G-TYTXGB0X5D" };
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const counterRef = ref(db, 'visitors/bdm-cc');
+        if (!sessionStorage.getItem('visited_bdm-cc')) { sessionStorage.setItem('visited_bdm-cc','true'); runTransaction(counterRef, c=>(c||0)+1); }
+        onValue(counterRef, s => { const c=s.val()||0; const el=document.getElementById('visitor-count-number'); if(el){const f=parseInt(el.textContent)||0;const st=performance.now();(function step(n){const p=Math.min((n-st)/1500,1);el.textContent=Math.floor(f+(c-f)*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(step)})(st)} });
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" role="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="images/dome/dome-mission-logo.png" class="brand-logo" alt="Brighton Dome Mission CC logo">
+                <div class="brand-text">
+                    <span class="brand-title">Dome Mission</span>
+                    <span class="brand-subtitle">Brighton Dome Mission CC</span>
+                </div>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown-parent"><a href="index.html#matches">MATCHES ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#matches" data-tab="1st-schedule">1st XI Schedule 2026</a></li>
+                            <li><a href="index.html#matches" data-tab="2nd-schedule">2nd XI Schedule 2026</a></li>
+                            <li><a href="index.html#matches" data-tab="1st-results">Results — 1st XI</a></li>
+                            <li><a href="index.html#matches" data-tab="2nd-results">Results — 2nd XI</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent"><a href="index.html#teams">TEAMS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#teams" data-tab="1st-squad">1st XI Squad</a></li>
+                            <li><a href="index.html#teams" data-tab="2nd-squad">2nd XI Squad</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="meet-the-team.html" class="nav-active">MEET THE TEAM</a></li>
+                    <li><a href="index.html#news">NEWS</a></li>
+                    <li class="dropdown-parent"><a href="index.html#media">MEDIA ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#media" data-folder="agm-2026">AGM Photos (2026)</a></li>
+                            <li><a href="index.html#media" data-folder="awards">Awards Ceremony</a></li>
+                            <li><a href="index.html#media" data-folder="1st-photos">1st XI Match Photos</a></li>
+                            <li><a href="index.html#media" data-folder="2nd-photos">2nd XI Match Photos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent"><a href="index.html#information">INFORMATION ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#information" data-tab="officials">Officials</a></li>
+                            <li><a href="index.html#information" data-tab="facilities">Playing Facilities</a></li>
+                            <li><a href="index.html#information" data-tab="history">Club History</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent"><a href="index.html#contact">CONTACT ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#contact" data-tab="contact-us">Get in Touch</a></li>
+                            <li><a href="index.html#contact" data-tab="join">Join the Club</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn">
+                        <span class="moon-icon">🌙</span><span class="sun-icon">☀️</span>
+                    </button>
+                    <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon" aria-label="Instagram">IG</a>
+                    <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon" aria-label="YouTube">YT</a>
+                    <a href="https://x.com/DomeMission" target="_blank" class="social-icon" aria-label="X">𝕏</a>
+                    <a href="index.html#contact" class="btn btn-primary btn-join">JOIN US</a>
+                </div>
+                <button class="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top"><button id="mobile-theme-toggle" aria-label="Toggle theme" class="icon-btn"><span class="moon-icon">🌙</span><span class="sun-icon">☀️</span></button></div>
+            <ul class="mobile-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="index.html#matches">MATCHES</a></li>
+                <li><a href="index.html#teams">TEAMS</a></li>
+                <li><a href="meet-the-team.html" class="nav-active">MEET THE TEAM</a></li>
+                <li><a href="index.html#news">NEWS</a></li>
+                <li><a href="index.html#media">MEDIA</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <div class="mobile-socials">
+                <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon">IG</a>
+                <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank" class="social-icon">YT</a>
+                <a href="https://x.com/DomeMission" target="_blank" class="social-icon">𝕏</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- BREADCRUMB -->
+        <div class="pp-breadcrumb">
+            <div class="container">
+                <a href="meet-the-team.html">← Back to Meet the Team</a>
+            </div>
+        </div>
+
+        <!-- SECTION 1: HERO -->
+        <section class="pp-hero">
+            <div class="pp-hero-bg" style="background-image:url('images/squad/Joe-batting.jpg')"></div>
+            <div class="pp-hero-gradient"></div>
+            <div class="pp-hero-inner container">
+                <div class="pp-hero-text">
+                    <div class="section-label">— PLAYER PROFILE —</div>
+                    <h1 class="pp-hero-title">The Pitch Whisperer<br>&amp; Power Hitter</h1>
+                    <p class="pp-hero-subtitle">Groundsman. Explosive Batsman. Part-Time Artist. Full-Time Legend.</p>
+                    <h2 class="pp-hero-name">Joe Gatford</h2>
+                    <div class="pp-hero-tags">
+                        <span class="badge badge-primary">🏏 T20 Explosive Batsman</span>
+                        <span class="badge badge-green">🌱 Club Groundsman</span>
+                        <span class="badge badge-gold">🎨 Part-Time Artist</span>
+                    </div>
+                    <p class="pp-hero-intro">By day he's manicuring the pitch to perfection. By evening, he's depositing the ball somewhere in the neighbouring postcode. Joe Gatford is the man who builds the stage — and then steals the show on it.</p>
+                </div>
+                <div class="pp-hero-image">
+                    <img src="images/squad/Joe-batting.jpg" alt="Joe Gatford batting for Dome Mission" loading="eager" class="pp-clickable" data-full="images/squad/Joe-batting.jpg">
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: THE CRAFT OF THE WICKET -->
+        <section class="pp-section pp-groundsman">
+            <div class="container">
+                <div class="section-divider divider-ball"></div>
+                <h2 class="section-title text-center">The Craft of the Wicket</h2>
+
+                <div class="pp-row pp-row-img-left">
+                    <div class="pp-row-img">
+                        <img src="images/squad/joe-ground1.jpg" alt="Joe Gatford preparing the cricket pitch" loading="lazy" class="pp-clickable" data-full="images/squad/joe-ground1.jpg">
+                    </div>
+                    <div class="pp-row-text">
+                        <p>"I start preparing each wicket 8 or 9 days out from match day. Gradually taking the wicket's grass length down from 12–14mm down eventually to 5–8mm, so as to keep the grass live and not to stress it out. I follow the process each day of brushing and/or gently scarifying the wicket, lifting blades of grass, then giving it a nice even cut with my cylinder mower — then I jump on my two-ton roller and give it a slow roll for 20–30 mins.</p>
+                        <p>My favourite part is the finishing touch of painting the lines with very satisfying precision… I am also a part-time artist so this suits me well! It might sound boring to some, but I absolutely love doing it!"</p>
+                    </div>
+                </div>
+
+                <!-- Photo Strip -->
+                <div class="pp-photo-strip">
+                    <img src="images/squad/joe-ground2.jpg" alt="Joe Gatford groundsman work" loading="lazy" class="pp-clickable" data-full="images/squad/joe-ground2.jpg">
+                    <img src="images/squad/joe-ground3.jpg" alt="Dome Mission pitch preparation" loading="lazy" class="pp-clickable" data-full="images/squad/joe-ground3.jpg">
+                    <img src="images/squad/joe-pitch.jpg" alt="The finished pitch at Horsdean" loading="lazy" class="pp-clickable" data-full="images/squad/joe-pitch.jpg">
+                    <img src="images/squad/joe-pitch2.jpg" alt="Match-day pitch ready" loading="lazy" class="pp-clickable" data-full="images/squad/joe-pitch2.jpg">
+                </div>
+
+                <!-- Pull Quote -->
+                <blockquote class="pp-pullquote">
+                    <span class="pp-pullquote-icon">🏏</span>
+                    <p>"Two-ton roller. Cylinder mower. Part-time artist. Joe Gatford doesn't prepare pitches — he <em>curates</em> them."</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PITCH PHILOSOPHY -->
+        <section class="pp-section pp-philosophy">
+            <div class="container">
+                <div class="section-divider divider-ball"></div>
+                <h2 class="section-title text-center">The Pitch Philosophy</h2>
+
+                <div class="pp-row pp-row-img-right">
+                    <div class="pp-row-text">
+                        <p>"I would say any wicket I prepare, the boys can work out how to adapt and win on it. But I would say I like to leave a little extra grass on it for our spinners, but enough pace and carry for it to come on nicely for bats and to assist our lively quick bowlers as well… hopefully an all-round good cricket wicket… all going to plan."</p>
+                    </div>
+                    <div class="pp-row-img">
+                        <img src="images/squad/joe-pitch.jpg" alt="Finished Dome Mission pitch" loading="lazy" class="pp-clickable" data-full="images/squad/joe-pitch.jpg">
+                    </div>
+                </div>
+
+                <div class="pp-callout glass-card">
+                    <p>🌱 <strong>In other words:</strong> Joe builds the perfect all-round wicket, then bats on it with the confidence of a man who knows exactly what he's made.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: THE BATSMAN -->
+        <section class="pp-section pp-batsman">
+            <div class="container">
+                <div class="section-divider divider-ball"></div>
+                <h2 class="section-title text-center">The Batsman</h2>
+
+                <div class="pp-row pp-row-img-left">
+                    <div class="pp-row-img">
+                        <img src="images/squad/Joe-batting.jpg" alt="Joe Gatford batting action shot" loading="lazy" class="pp-clickable" data-full="images/squad/Joe-batting.jpg">
+                    </div>
+                    <div class="pp-row-text">
+                        <p>"The lads have always sent me out to bat full of confidence in my role as an attacking batsman that had full licence to let loose! My favourite shot is hitting a clean flat six over extra cover!"</p>
+
+                        <div class="pp-stats-grid">
+                            <div class="pp-stat-card glass-card">
+                                <span class="pp-stat-icon">🏏</span>
+                                <div class="pp-stat-label">Batting Style</div>
+                                <div class="pp-stat-value">Right-hand explosive<br>top / middle order</div>
+                            </div>
+                            <div class="pp-stat-card glass-card">
+                                <span class="pp-stat-icon">💥</span>
+                                <div class="pp-stat-label">Favourite Shot</div>
+                                <div class="pp-stat-value">Clean flat six<br>over extra cover</div>
+                            </div>
+                            <div class="pp-stat-card glass-card">
+                                <span class="pp-stat-icon">🎯</span>
+                                <div class="pp-stat-label">Role</div>
+                                <div class="pp-stat-value">T20 Finisher /<br>Power Hitter</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: THE HONEST TRUTH -->
+        <section class="pp-section pp-honest">
+            <div class="container">
+                <div class="section-divider divider-ball"></div>
+                <h2 class="section-title text-center">The Honest Truth</h2>
+
+                <div class="pp-text-block glass-card">
+                    <p>"Sometimes it can be a tough day at the office when you put hours of work into a pitch and it's not your day… but on the other hand it can work in my favour — all week I am able to become very familiar with it, and occasionally have a little shadow bat with one of my tools when no one is watching!"</p>
+                </div>
+
+                <blockquote class="pp-pullquote pp-pullquote-green">
+                    <span class="pp-pullquote-icon">🌱</span>
+                    <p>"Groundsman by title. Cricket scientist by nature. Shadow batter by habit — when no one's watching, of course."</p>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- SECTION 6: FAVOURITE MOMENT -->
+        <section class="pp-section pp-moment">
+            <div class="container">
+                <div class="section-divider divider-ball"></div>
+                <h2 class="section-title text-center">Favourite Cricket Moment</h2>
+
+                <div class="pp-glory-card">
+                    <div class="pp-glory-badge">⭐ MOMENT OF GLORY</div>
+                    <blockquote class="pp-glory-quote">
+                        <p>"In a T20 cup game once, needing 30-ish off 4 overs batting down at 6, I came to the crease very relaxed and managed to hit the runs with an over to spare!"</p>
+                    </blockquote>
+                    <p class="pp-glory-tribute">"But overall I'd say the countless memories of Dom'e'ination in the leagues over the years with all my brothers!"</p>
+                    <p class="pp-glory-caption">30 off 4. Relaxed. Done with an over to spare. Just another day for the man who already knew the pitch better than anyone.</p>
+                </div>
+
+                <div class="pp-back-link text-center mt-2">
+                    <a href="meet-the-team.html" class="btn btn-outline">← Back to Meet the Team</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIGHTBOX -->
+        <div id="pp-lightbox" class="pp-lightbox" role="dialog" aria-modal="true" aria-label="Full size image">
+            <button class="pp-lightbox-close" aria-label="Close">✕</button>
+            <div class="pp-lightbox-content">
+                <img id="pp-lightbox-img" src="" alt="">
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container pb-m">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="brand mb-1">
+                        <img src="images/dome/dome-mission-logo.png" class="brand-logo sm" alt="Brighton Dome Mission CC logo">
+                        <div class="brand-text"><span class="brand-title">DOME MISSION</span></div>
+                    </div>
+                    <p class="mt-1">Established 1937 | Patcham, Brighton</p>
+                    <p>Friendly. Sociable. Inclusive. Up the Dome! 🏏</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="mb-1">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#matches">Matches</a></li>
+                        <li><a href="meet-the-team.html">Meet the Team</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="mb-1">Contact</h4>
+                    <ul class="footer-links nounderline mb-1">
+                        <li>📧 <a href="mailto:domemission7@gmail.com">domemission7@gmail.com</a></li>
+                        <li>📞 Joshith: <a href="tel:07786589595">07786589595</a></li>
+                    </ul>
+                    <a href="https://wa.me/447786589595" target="_blank" class="btn btn-green btn-sm inline-block">💬 WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom container">
+            <div>© 2026 Dome Mission CC. All Rights Reserved.</div>
+            <div class="text-center">🏏 Sussex Cricket League | Division 4 & 10</div>
+            <div class="text-right">
+                <div id="visitor-counter-widget" class="mb-sm" aria-label="Visitor counter">
+                    <div id="visitor-counter-inner">
+                        <span id="visitor-counter-icon">👁</span>
+                        <span id="visitor-count-number">...</span>
+                        <span id="visitor-counter-label">yorkers</span>
+                    </div>
+                </div>
+                Website by <a href="https://www.zaynticlabs.co.uk/" target="_blank" class="link">ZaynticLabs</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+        function toggleTheme() { const n = html.getAttribute('data-theme')==='dark'?'light':'dark'; html.setAttribute('data-theme',n); localStorage.setItem('dome-theme',n); }
+        themeToggle?.addEventListener('click', toggleTheme);
+        mobileThemeToggle?.addEventListener('click', toggleTheme);
+        const saved = localStorage.getItem('dome-theme');
+        if (saved) html.setAttribute('data-theme', saved);
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        hamburger?.addEventListener('click', () => mobileMenu.classList.toggle('active'));
+        document.querySelectorAll('.mobile-links a').forEach(l => l.addEventListener('click', () => mobileMenu.classList.remove('active')));
+
+        // ===== LIGHTBOX =====
+        const lightbox = document.getElementById('pp-lightbox');
+        const lightboxImg = document.getElementById('pp-lightbox-img');
+        const lightboxClose = document.querySelector('.pp-lightbox-close');
+
+        document.querySelectorAll('.pp-clickable').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.getAttribute('data-full') || img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightboxClose?.addEventListener('click', closeLightbox);
+        lightbox?.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    </script>
+</body>
+</html>

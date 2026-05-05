@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JPY1JQEVN5"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-JPY1JQEVN5');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== PRIMARY SEO ===== -->
+    <title>Meet the Team | Brighton Dome Mission CC</title>
+    <meta name="description"
+        content="Meet the players of Brighton Dome Mission CC — a friendly, inclusive cricket club in Patcham, Brighton. Explore player profiles, stories, and stats.">
+    <link rel="canonical" href="https://www.brightondomemissioncc.co.uk/meet-the-team.html">
+
+    <!-- ===== OPEN GRAPH ===== -->
+    <meta property="og:title" content="Meet the Team | Brighton Dome Mission CC">
+    <meta property="og:description"
+        content="Get to know the players behind Brighton Dome Mission CC. Player profiles, stories, and cricket stats.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.brightondomemissioncc.co.uk/meet-the-team.html">
+    <meta property="og:image" content="https://www.brightondomemissioncc.co.uk/images/dome/dome-mission-logo.png">
+
+    <!-- ===== FAVICON ===== -->
+    <link rel="icon" href="images/dome/dome-mission-logo.png">
+
+    <!-- ===== GOOGLE FONTS ===== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Orbitron:wght@700&family=Rajdhani:wght@700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase Realtime Database — Visitor Counter -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-app.js";
+        import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/12.12.1/firebase-database.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBJ3BSPUwxjuSCNxSVM4yyxH1Zn7YNqY2w",
+            authDomain: "zayntic-visitor-counter.firebaseapp.com",
+            databaseURL: "https://zayntic-visitor-counter-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "zayntic-visitor-counter",
+            storageBucket: "zayntic-visitor-counter.firebasestorage.app",
+            messagingSenderId: "842390090860",
+            appId: "1:842390090860:web:b4fb880dffa85cfeecd449",
+            measurementId: "G-TYTXGB0X5D"
+        };
+
+        const SITE_KEY = "bdm-cc";
+
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const counterRef = ref(db, 'visitors/' + SITE_KEY);
+
+        const sessionKey = 'visited_' + SITE_KEY;
+        if (!sessionStorage.getItem(sessionKey)) {
+            sessionStorage.setItem(sessionKey, 'true');
+            runTransaction(counterRef, (current) => (current || 0) + 1);
+        }
+
+        onValue(counterRef, (snapshot) => {
+            const count = snapshot.val() || 0;
+            const el = document.getElementById('visitor-count-number');
+            if (el) animateCount(el, parseInt(el.textContent) || 0, count);
+        });
+
+        function animateCount(el, from, to) {
+            const duration = 1500;
+            const start = performance.now();
+            function step(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const ease = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.floor(from + (to - from) * ease).toLocaleString();
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+    </script>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar scrolled" role="navigation">
+        <div class="nav-container">
+            <a href="index.html" class="brand">
+                <img src="images/dome/dome-mission-logo.png" class="brand-logo"
+                    alt="Brighton Dome Mission CC cricket club logo">
+                <div class="brand-text">
+                    <span class="brand-title">Dome Mission</span>
+                    <span class="brand-subtitle">Brighton Dome Mission CC</span>
+                </div>
+            </a>
+
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html">HOME</a></li>
+                    <li class="dropdown-parent">
+                        <a href="index.html#matches">MATCHES ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#matches" data-tab="1st-schedule">1st XI Schedule 2026</a></li>
+                            <li><a href="index.html#matches" data-tab="2nd-schedule">2nd XI Schedule 2026</a></li>
+                            <li><a href="index.html#matches" data-tab="1st-results">Results — 1st XI</a></li>
+                            <li><a href="index.html#matches" data-tab="2nd-results">Results — 2nd XI</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="index.html#teams">TEAMS ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#teams" data-tab="1st-squad">1st XI Squad</a></li>
+                            <li><a href="index.html#teams" data-tab="2nd-squad">2nd XI Squad</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="meet-the-team.html" class="nav-active">MEET THE TEAM</a></li>
+                    <li><a href="index.html#news">NEWS</a></li>
+                    <li class="dropdown-parent">
+                        <a href="index.html#media">MEDIA ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#media" class="media-link" data-folder="agm-2026">AGM Photos (2026)</a></li>
+                            <li><a href="index.html#media" class="media-link" data-folder="awards">Awards Ceremony</a></li>
+                            <li><a href="index.html#media" class="media-link" data-folder="1st-photos">1st XI Match Photos</a></li>
+                            <li><a href="index.html#media" class="media-link" data-folder="2nd-photos">2nd XI Match Photos</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="index.html#information">INFORMATION ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#information" data-tab="officials">Officials</a></li>
+                            <li><a href="index.html#information" data-tab="facilities">Playing Facilities</a></li>
+                            <li><a href="index.html#information" data-tab="history">Club History</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown-parent">
+                        <a href="index.html#contact">CONTACT ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="index.html#contact" data-tab="contact-us">Get in Touch</a></li>
+                            <li><a href="index.html#contact" data-tab="join">Join the Club</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button id="theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn">
+                        <span class="moon-icon">🌙</span>
+                        <span class="sun-icon">☀️</span>
+                    </button>
+                    <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon"
+                        aria-label="Instagram">IG</a>
+                    <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank"
+                        class="social-icon" aria-label="YouTube">YT</a>
+                    <a href="https://x.com/DomeMission" target="_blank" class="social-icon"
+                        aria-label="X (Twitter)">𝕏</a>
+                    <a href="index.html#contact" class="btn btn-primary btn-join">JOIN US</a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-inner">
+            <div class="mobile-top">
+                <button id="mobile-theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn">
+                    <span class="moon-icon">🌙</span>
+                    <span class="sun-icon">☀️</span>
+                </button>
+            </div>
+            <ul class="mobile-links">
+                <li><a href="index.html">HOME</a></li>
+                <li class="dropdown-parent">
+                    <a href="#">MATCHES ▾</a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="index.html#matches">1st XI Schedule</a></li>
+                        <li><a href="index.html#matches">2nd XI Schedule</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown-parent">
+                    <a href="#">TEAMS ▾</a>
+                    <ul class="mobile-dropdown">
+                        <li><a href="index.html#teams">1st XI Squad</a></li>
+                        <li><a href="index.html#teams">2nd XI Squad</a></li>
+                    </ul>
+                </li>
+                <li><a href="meet-the-team.html" class="nav-active">MEET THE TEAM</a></li>
+                <li><a href="index.html#news">NEWS</a></li>
+                <li><a href="index.html#media">MEDIA</a></li>
+                <li><a href="index.html#information">INFORMATION</a></li>
+                <li><a href="index.html#contact">CONTACT</a></li>
+            </ul>
+            <div class="mobile-socials">
+                <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon">IG</a>
+                <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank"
+                    class="social-icon">YT</a>
+                <a href="https://x.com/DomeMission" target="_blank" class="social-icon">𝕏</a>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <!-- HERO BANNER -->
+        <section class="mtt-hero">
+            <div class="mtt-hero-overlay"></div>
+            <div class="mtt-hero-content">
+                <div class="section-label">— PLAYER PROFILES —</div>
+                <h1 class="mtt-hero-title">Meet the Team</h1>
+                <p class="mtt-hero-sub">The faces behind Brighton Dome Mission CC. Get to know the players who make this club what it is.</p>
+            </div>
+        </section>
+
+        <!-- PLAYER GRID -->
+        <section class="mtt-grid-section">
+            <div class="container">
+                <div class="mtt-player-grid">
+
+                    <!-- Joe Gatford Card -->
+                    <a href="joe-gatford.html" class="mtt-player-card glass-card" id="card-joe-gatford">
+                        <div class="mtt-card-image-wrap">
+                            <img src="images/squad/Joe-batting.jpg" alt="Joe Gatford batting for Brighton Dome Mission CC" class="mtt-card-image" loading="lazy">
+                            <div class="mtt-card-image-overlay">
+                                <span class="mtt-view-profile">View Profile →</span>
+                            </div>
+                        </div>
+                        <div class="mtt-card-body">
+                            <h3 class="mtt-card-name">Joe Gatford</h3>
+                            <div class="mtt-card-roles">
+                                <span class="badge badge-primary">🏏 Explosive Batsman</span>
+                                <span class="badge badge-green">🌱 Groundsman</span>
+                                <span class="badge badge-gold">🎨 Part-Time Artist</span>
+                            </div>
+                            <p class="mtt-card-tagline">The man who builds the stage — and then steals the show on it.</p>
+                            <span class="btn btn-primary btn-sm mtt-card-btn">Read Full Profile</span>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: More player profiles coming soon -->
+                    <div class="mtt-coming-soon glass-card">
+                        <div class="mtt-coming-icon">🏏</div>
+                        <h3>More Profiles Coming Soon</h3>
+                        <p>We're working on bringing you more player stories from the Dome Mission squad. Watch this space!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container pb-m">
+            <div class="footer-grid">
+                <!-- Col 1 -->
+                <div class="footer-col">
+                    <div class="brand mb-1">
+                        <img src="images/dome/dome-mission-logo.png" class="brand-logo sm"
+                            alt="Brighton Dome Mission CC cricket club logo">
+                        <div class="brand-text">
+                            <span class="brand-title">DOME MISSION</span>
+                        </div>
+                    </div>
+                    <p class="mt-1">Established 1937 | Patcham, Brighton</p>
+                    <p>Friendly. Sociable. Inclusive. Up the Dome! 🏏</p>
+                    <div class="social-row pt-1">
+                        <a href="https://www.instagram.com/domemission/" target="_blank" class="social-icon"
+                            aria-label="Instagram">IG</a>
+                        <a href="https://www.youtube.com/channel/UC5LYfdQygbb3zKz_Ei4gT7A" target="_blank"
+                            class="social-icon" aria-label="YouTube">YT</a>
+                        <a href="https://x.com/DomeMission" target="_blank" class="social-icon" aria-label="X">𝕏</a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#matches">Matches</a></li>
+                        <li><a href="index.html#teams">Teams</a></li>
+                        <li><a href="meet-the-team.html">Meet the Team</a></li>
+                        <li><a href="index.html#news">News</a></li>
+                        <li><a href="index.html#media">Media</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">2026 Season</h4>
+                    <ul class="footer-links nounderline">
+                        <li>1st XI — Division 4 East</li>
+                        <li>2nd XI — Division 10 Central</li>
+                        <li>1st XI Captain: Vikram Sharma</li>
+                        <li>2nd XI Captain: Vidit Gupta</li>
+                        <li>Home: Horsdean, Brighton</li>
+                        <li>Home: Braypool, Brighton</li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="footer-col">
+                    <h4 class="mb-1">Contact</h4>
+                    <ul class="footer-links nounderline mb-1">
+                        <li>📧 <a href="mailto:domemission7@gmail.com">domemission7@gmail.com</a></li>
+                        <li>📞 Joshith: <a href="tel:07786589595">07786589595</a></li>
+                        <li>📞 Atish: <a href="tel:07871571260">07871571260</a></li>
+                    </ul>
+                    <a href="https://wa.me/447786589595" target="_blank" class="btn btn-green btn-sm inline-block">💬
+                        WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom container">
+            <div>© 2026 Dome Mission CC. All Rights Reserved.</div>
+            <div class="text-center">🏏 Sussex Cricket League | Division 4 & 10</div>
+            <div class="text-right">
+                <div id="visitor-counter-widget" class="mb-sm" aria-label="Visitor counter">
+                    <div id="visitor-counter-inner">
+                        <span id="visitor-counter-icon">👁</span>
+                        <span id="visitor-count-number">...</span>
+                        <span id="visitor-counter-label">yorkers</span>
+                    </div>
+                </div>
+                Website by <a href="https://www.zaynticlabs.co.uk/" target="_blank" class="link">ZaynticLabs</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ===== THEME TOGGLE =====
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+        const html = document.documentElement;
+
+        function toggleTheme() {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('dome-theme', next);
+        }
+        themeToggle?.addEventListener('click', toggleTheme);
+        mobileThemeToggle?.addEventListener('click', toggleTheme);
+
+        // Restore saved theme
+        const saved = localStorage.getItem('dome-theme');
+        if (saved) html.setAttribute('data-theme', saved);
+
+        // ===== HAMBURGER =====
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        hamburger?.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('.mobile-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // Mobile dropdown toggles
+        document.querySelectorAll('.mobile-links .dropdown-parent > a').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const dropdown = toggle.nextElementSibling;
+                if (dropdown) dropdown.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
